@@ -1,0 +1,12 @@
+[
+    {
+        "content": "This pudding is delicious!",
+        "user_id": 1,
+        "recipe_id": 1
+    },
+    {
+        "content": "Super chocolate-y!",
+        "user_id": 2,
+        "recipe_id": 1
+    }
+]

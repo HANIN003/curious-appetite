@@ -4,7 +4,15 @@ const { Tag, Recipe, RecipeTag } = require('../../models');
 router.get('/', async (req, res) => {
     try {
       const tagData = await Tag.findAll({
-        include: Recipe
+        include: [
+          {
+            model: Recipe,
+            attributes: ['title'],
+            through: {
+              attributes: []
+            }
+          }
+        ]
       });
       res.status(200).json(tagData);
     } catch (err) {
