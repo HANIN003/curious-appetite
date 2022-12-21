@@ -8,7 +8,7 @@ const newFormHandler = async (event) => {
   const directions = document.querySelector("#recipe-directions").value.trim();
 
   if (name && ingredients && directions) {
-    const response = await fetch(`api/recipes`, {
+    const response = await fetch(`api/recipe`, {
       method: "POST",
       body: JSON.stringify({ name, ingredients, directions }),
       headers: { "Content-Type": "application/json" },
@@ -26,7 +26,7 @@ const delButtonHandler = async (event) => {
   if (event.target.hasAttribute("data-id")) {
     const id = event.target.getAttribute("data-id");
 
-    const response = await fetch(`/api/recipes/${id}`, {
+    const response = await fetch(`/api/recipe/${id}`, {
       method: "DELETE",
     });
 
