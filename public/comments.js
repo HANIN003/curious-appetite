@@ -1,12 +1,18 @@
 const commentFormHandler = async (event) => {
   event.preventDefault();
 
-  const comment = document.querySelector("#comment").value.trim();
+  const comment = document
+    .querySelector('input[name="comment-body"]')
+    .value.trim();
+
+  const postId = window.location.toString().split("/")[
+    window.location.toString().split("/").length - 1
+  ];
 
   if (comment) {
-    const response = await fetch(`/api/comments`, {
+    const response = await fetch(`/api/comment`, {
       method: "POST",
-      body: JSON.stringify({ comment }),
+      body: JSON.stringify({ postId, comment }),
       headers: { "Content-Type": "application/json" },
     });
 
@@ -22,7 +28,7 @@ const delButtonHandler = async (event) => {
   if (event.target.hasAttribute("data-id")) {
     const id = event.target.getAttribute("data-id");
 
-    const response = await fetch(`/api/comments/${id}`, {
+    const response = await fetch(`/api/comment/${id}`, {
       method: "DELETE",
     });
 
