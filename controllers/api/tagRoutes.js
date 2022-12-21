@@ -1,12 +1,12 @@
 const router = require('express').Router();
-const { User, Recipe, Tag, RecipeTag } = require('../../models');
+const { Tag, Recipe, RecipeTag } = require('../../models');
 
 router.get('/', async (req, res) => {
     try {
-      const recipeData = await Recipe.findAll({
-        include: [User, Tag]
+      const tagData = await Tag.findAll({
+        include: Recipe
       });
-      res.status(200).json(recipeData);
+      res.status(200).json(tagData);
     } catch (err) {
       res.status(500).json(err);
     }
