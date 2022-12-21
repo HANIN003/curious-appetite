@@ -1,3 +1,23 @@
+$font-stack:    Helvetica, sans-serif;
+$primary-color: #31b0d5;
+$secondary-color: #ec971f;
+$success-color: #5cb85c;
+
+//Set text color based on background
+@function set-text-color($color) {
+    @if lightness($color) > 70% {
+        @return #333;
+    } @else {
+        @return #fff;
+    }
+}
+
+//Set background & text color
+@mixin set-background($color) {
+    background-color: $color;
+    color: set-text-color($color);
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -5,9 +25,23 @@
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: $font-stack;
     font-size: 16px;
-    line-height: 1.6;
-    color: #333;
+    line-height: 1.5;
+    background-color: $primary-color;
+    color: set-text-color($primary-color);
 }
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+}
+
+p {
+    margin-bottom: 1em;
+}
+
+
+
+
 
