@@ -1,4 +1,5 @@
 $font-stack:    Helvetica, sans-serif;
+<<<<<<< HEAD
 $primary-color: #31b0d5;
 $secondary-color: #ec971f;
 $success-color: #5cb85c;
@@ -17,6 +18,10 @@ $success-color: #5cb85c;
     background-color: $color;
     color: set-text-color($color);
 }
+=======
+$primary-color: #333;
+
+>>>>>>> 45e89711c734947b41405aa1920e1a5443c2647b
 
 * {
     box-sizing: border-box;
@@ -32,6 +37,7 @@ body {
     color: set-text-color($primary-color);
 }
 
+<<<<<<< HEAD
 h1 {
     font-size: 2em;
     margin-bottom: 0.5em;
@@ -43,5 +49,7 @@ p {
 
 
 
+=======
+>>>>>>> 45e89711c734947b41405aa1920e1a5443c2647b
 
 
