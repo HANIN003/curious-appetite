@@ -1,0 +1,19 @@
+$font-stack:    Helvetica, sans-serif;
+$primary-color: #333;
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: $font-stack;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+}
+
+
+
