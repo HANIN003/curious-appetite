@@ -1,4 +1,4 @@
-//curious-appetite app start
+
 const Sequelize = require('sequelize');
 require ('dotenv').config();
 
