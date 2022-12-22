@@ -1,14 +1,101 @@
 [
     {
-        "tag_name": "contains nuts"
+        "tag_name": "Appetizer"
     },
     {
-        "tag_name": "contains dairy"
+        "tag_name": "Beverage"
     },
     {
-        "tag_name": "dessert"
+        "tag_name": "Bread"
     },
     {
-        "tag_name": "pudding"
+        "tag_name": "Cake"
+    },
+    {
+        "tag_name": "Frosting"
+    },
+    {
+        "tag_name": "Cookie"
+    },
+    {
+        "tag_name": "Dessert"
+    },
+    {
+        "tag_name": "Egg"
+    },
+    {
+        "tag_name": "Meat"
+    },
+    {
+        "tag_name": "Fish"
+    },
+    {
+        "tag_name": "Poultry"
+    },
+    {
+        "tag_name": "Pie"
+    },
+    {
+        "tag_name": "Salad"
+    },
+    {
+        "tag_name": "Sauce"
+    },
+    {
+        "tag_name": "Soup"
+    },
+    {
+        "tag_name": "Supper"
+    },
+    {
+        "tag_name": "Vegetable"
+    },
+    {
+        "tag_name": "Gluten-Free"
+    },
+    {
+        "tag_name": "Vegan"
+    },
+    {
+        "tag_name": "Vegetarian"
+    },
+    {
+        "tag_name": "Lactose-Free"
+    },
+    {
+        "tag_name": "Kosher"
+    },
+    {
+        "tag_name": "Halal"
+    },
+    {
+        "tag_name": "Seafood"
+    },
+    {
+        "tag_name": "Contains Tree Nuts"
+    },
+    {
+        "tag_name": "Contains Peanuts"
+    },
+    {
+        "tag_name": "Contains Shellfish"
+    },
+    {
+        "tag_name": "Contains Wheat"
+    },
+    {
+        "tag_name": "Contains Soy"
+    },
+    {
+        "tag_name": "Contains Milk"
+    },
+    {
+        "tag_name": "Contains Dairy"
+    },
+    {
+        "tag_name": "Contains Eggs"
+    },
+    {
+        "tag_name": "Contains Sesame"
     }
 ]
