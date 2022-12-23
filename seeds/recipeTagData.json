@@ -1,14 +1,22 @@
 [
     {
         "recipe_id": 1,
-        "tag_id": 2
+        "tag_id": 7
     },
     {
         "recipe_id": 1,
-        "tag_id": 3
+        "tag_id": 32
     },
     {
-        "recipe_id": 1,
-        "tag_id": 4
+        "recipe_id": 2,
+        "tag_id": 6
+    },
+    {
+        "recipe_id": 2,
+        "tag_id": 30
+    },
+    {
+        "recipe_id": 2,
+        "tag_id": 34
     }
 ]

@@ -22,19 +22,11 @@ app.use(session({ secret : 'secret' , resave : false , saveUninitialized : true 
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-// app.use(express.static("public"));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(routes);
-
-//Auth, API and HTML routes
-// app.use(authRoutes);
-// app.use(apiRoutes);
-// app.use(htmlRoutes);
 
 sequelize.sync({ force: false }).then(() => {
     app.listen(PORT, () => console.log(`Now listening on port ${PORT}`));
 }
 );
-
-// module .exports = app;
