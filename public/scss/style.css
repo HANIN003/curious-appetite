@@ -8,7 +8,7 @@ body {
   font-family: Helvetica, sans-serif;
   font-size: 16px;
   line-height: 1.5;
-  background-color: #877179;
+  background-color: #4b4366;
   color: #fff;
 }
 
@@ -85,6 +85,16 @@ h1 {
   left: 100em;
   top: 1em;
 }
+
+.background-image {
+  background-image: url("https://i.imgur.com/8Q5Z5ZK.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+}
+
 
 
 
