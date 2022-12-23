@@ -8,5 +8,10 @@
         "content": "Super chocolate-y!",
         "user_id": 2,
         "recipe_id": 1
+    },
+    {
+        "content": "'Tis the season!",
+        "user_id": 1,
+        "recipe_id": 2
     }
 ]
