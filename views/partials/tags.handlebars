@@ -1,0 +1,13 @@
+<div class="tags">
+  {{#each this}}
+  <section class="tag">
+    <div>
+      <a href="/recipe/{{tag_name}}" target="_blank">{{recipe.recipename}}</a>
+    </div>
+    <div class="text">
+      {{tag_text}}
+      <br></br>
+    </div>
+  </section>
+  {{/each}}
+</div>
