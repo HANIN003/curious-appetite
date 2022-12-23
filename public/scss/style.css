@@ -8,15 +8,86 @@ body {
   font-family: Helvetica, sans-serif;
   font-size: 16px;
   line-height: 1.5;
-  background-color: #31b0d5;
+  background-color: #877179;
   color: #fff;
 }
 
 h1 {
   font-size: 2em;
   margin-bottom: 0.5em;
+  text-align: center;
 }
 
-p {
-  margin-bottom: 1em;
-}/*# sourceMappingURL=style.css.map */
+#view {
+  width: 80%;
+  margin: 0 auto;
+  padding: 0.2em;
+  background-color: #fff;
+  color: #000;
+  position: relative;
+  left: 31em;
+  top: 3.2em;
+}
+
+#post {
+  width: 80%;
+  margin: 0 auto;
+  padding: 0.2em;
+  background-color: #fff;
+  color: #000;
+  position: relative;
+  left: 68em;
+  top: 3.2em;
+}
+
+.search-bar {
+  position: relative;
+  left: 32em;
+  color: #fff;
+  font-size: 1.5em;
+}
+
+.login {
+  position: relative;
+  left: 37em;
+  color: #fff;
+  font-size: 1.3em;
+  top: 3em;
+}
+
+#username {
+  border: 1px solid #000;
+  border-radius: 5px;
+  padding: 0.2em;
+  margin: 0.5em;
+
+}
+
+#password {
+  border: 1px solid #000;
+  border-radius: 5px;
+  padding: 0.2em;
+  margin: 0.5em;
+}
+
+.navbar {
+  height: 14em;
+}
+
+.pepper {
+  position: relative;
+  left: 1em;
+  top: 1em;
+}
+
+.redpepper {
+  position: relative;
+  left: 100em;
+  top: 1em;
+}
+
+
+
+
+  
+  
