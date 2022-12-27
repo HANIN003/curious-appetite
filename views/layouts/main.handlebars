@@ -20,40 +20,78 @@
     ></script>
   </head>
   <body>
-    <nav class="navbar">
-      <a class="pepper" href="/"><i class="fas fa-pepper-hot fa-5x"></i></a>
-      <a class="redpepper" href="/">
-      <i class="fas fa-pepper-hot fa-5x" style="color: red"></i></a>
-      <h1 class="title">Curious Appetite</h1>
-      
-        <a href class="navbar-item" id="post">Post a Recipe</a>
-        <a href="/recipes" class="navbar-item" id="view">View Recipes</a>
-      
-    </nav>
-    <div class="container">
+      <a class="cookie" href="/"><i class="fa-solid fa-cookie-bite fa-8x"></i></a>
+      <!--navbar--><style="color: black"></style=
+      <div class="navbar">
+      <div class="navbar-container">
+      <div class="navbar-items">
+      <a href="/recipes" class="navbar-item" id="view">View Recipes</a>
+      </div>
 
-      {{{ body }}}
-        <!--search bar-->
+        <a href="/post" class="navbar-item" id="post">Post a Recipe!</a>
+      </div>
+    </div>
+    <!--Cool animated banner-->
+    <div class="banner">
+      <span class="banner-text">Curious Appetite</span>
+      <span class="banner-text1">Find Your Next Favorite Recipe!</span>
+    </div>
+      <!--search bar-->
         <div class="search-bar">
-          <input type="text" name="search-text" placeholder="Search for a recipe" />
+          <input type="text" id="textBox" name="search-text" placeholder="Search for a recipe" />
           <button type="submit">
             <i class="fas fa-search"></i>
           </button>
         </div>
-   <!-- <img src="/images/background.jpg" alt="Curious Appetite" class="background-image">-->
-        <div class="login">
-          <input type="text" name="username" id="username" placeholder="Username" />
-          <button type="submit" id="login">Login</button>
-          <div class="password">
-            <input type="text" name="password" id="password" placeholder="Password" />
-            <sign-up>
-              <button type="submit" id="signup">Sign Up</button>
-            </sign-up>
-      
-    </nav>
-        </div>
-    <div class="container">
 
+<p class="sign">Sign in here</p>
+      <div class="login-container">  
+    <div class="login" style="index: 1000"></div>
+                
+        <input type="text" id="username" placeholder="username">
+        <input type="text" id="password" placeholder="******password">
+        <div class="login-items">
+          <a href="/login" class="login-item" id="login">Login</a>
+        </div>
+        <div class="login-items">
+          <a href="/logout" class="login-item1" id="logout">Logout</a>
+              <button type="submit" id="signup">Sign Up
+                <i class="fas fa-user-plus"></i>
+              <a href="./partials/signup.handlebars"> 
+              </button>
+              </a>
+        </div>
+      </div>
+    </div>
+
+      
+    <div class="col md-8">
+      <div class="container" id="recipe-container">
+        <div class="row">
+          <div class="col-md-12">
+            <h2>Recipes</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card">
+              <div class="card-body">
+                
+                </p>
+                <a href="#" class="btn btn-primary">View Comments</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+
+        
+
+
+      {{{ body }}}
+    </div>
+  <script src="../public/js/logout.js">
+  </script>
       
 
   </body>

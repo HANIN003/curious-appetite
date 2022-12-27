@@ -1,6 +1,5 @@
 const router = require('express').Router();
 const { User } = require('../../models');
-
 // const { User, Recipe, Comment } = require('../../models');
 
 // router.get('/', async (req, res) => {

@@ -1,19 +1,195 @@
-$font-stack:    Helvetica, sans-serif;
-$primary-color: #333;
+$font-stack: Cursive, sans-serif;
+$primary-color:  #333;
 
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+// Path: public/scss/_base.scss
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+  background-color: rgb(23, 63, 104);
 }
 
-body {
-    font-family: $font-stack;
-    font-size: 16px;
-    line-height: 1.5;
-    background-color: $primary-color;
-    color: set-text-color($primary-color);
+// Path: public/scss/_components.scss
+.button {
+  padding: 10px;
+  color: $primary-color;
+}
+
+.title {
+  color: $primary-color;
+  font-size: 40px;
+  text-align: center;
+}
+
+// Path: public/scss/_layout.scss
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+#recipe-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border: solid;
+  background-color: rgb(212, 170, 117);
+  color: darken($primary-color, 10%);
+  padding: 20px;
+  font-size: 25px;
+}
+
+.search-bar {
+  position: relative;
+  left: 0em;
+  top: 2.1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.4em;
+  color: rgb(43, 5, 5);  
+}
+
+#textBox {
+  z-index: 1000;
+  font-size: 20px;
+}
+
+.cookie {
+  width: 100px;
+  height: 100px;
+  margin: 20px;
+  position: relative;
+  left: 20em;
+  top: 2em;
+  color: rgb(88, 54, 11)
+}
+
+
+  
+
+
+
+#view {
+  position: relative;
+  left: 22em;
+  top: 9.4em;
+  align-items: center;
+  font-size: 1.5em;
+  color: white;
+  border: solid;
+  background-color: rgb(242, 218, 218);
+  color: darken($primary-color, 10%);
+  padding: 5px;
+  
+
+}
+
+#post {
+  position: relative;
+  left: 50em;;
+  top: 8em;
+  align-items: center;
+  font-size: 1.5em;
+  color: white;
+  border: solid;
+  background-color: rgb(242, 218, 218);
+  color: darken($primary-color, 10%);
+  padding: 5px;
+
+}
+
+.login {
+    padding: 20px;
+}
+
+#username {
+    margin: 10px;
+}
+
+#password {
+    margin: 10px;
+}
+
+.banner-text {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(243, 242, 242);
+  font-size: 50px;
+  text-align: center;
+}
+
+.banner-text1 {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(147, 93, 22);
+  font-size: 50px;
+  text-align: center;
+}
+
+#signup {
+  position: relative;
+  top: 35%;
+  left: 10%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 20px;
+  text-align: center;
+}
+
+.sign {
+  position: relative;
+  top: 37%;
+  left: 12%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 20px;
+  text-align: center;
+}
+
+.login-item {
+  position: relative;
+  top: 40%;
+  left: 3%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 20px;
+  text-align: center;
+}
+
+.login-item1 {
+  position: relative;
+  top: 42%;
+  left: 5%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 20px;
+  text-align: center;
+}
+
+#username {
+  position: relative;
+  top: 45%;
+  left: 5%;
+  transform: translate(-50%, -50%);
+  color: rgb(54, 3, 3);
+  font-size: 20px;
+  text-align: center;
+  margin: 15px;
+}
+
+#password {
+  position: relative;
+  top: 47%;
+  left: 4%;
+  transform: translate(-50%, -50%);
+  color: rgb(49, 4, 4);
+  font-size: 20px;
+  text-align: center;
+  margin: 15px;
 }
 
 

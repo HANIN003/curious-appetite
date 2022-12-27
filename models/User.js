@@ -1,6 +1,7 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 const bcrypt = require('bcrypt');
+//const User = require('./userRoutes');
 
 class User extends Model {}
 
@@ -49,5 +50,17 @@ User.init(
         modelName: 'user',
     }
 );
+
+User.prototype.checkPassword = function (loginPw) {
+    return bcrypt.compareSync(loginPw, this.password);
+};
+
+sequelize.sync({ force: false })
+.then(() => {
+    console.log('Created our tables');
+})
+.catch((err) => {
+    console.log(err);
+});
 
 module.exports = User;
