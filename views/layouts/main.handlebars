@@ -36,6 +36,7 @@
       <span class="banner-text">Curious Appetite</span>
       <span class="banner-text1">Find Your Next Favorite Recipe!</span>
     </div>
+    <img src="/images/background.jpg" alt="food" class="background" />
       <!--search bar-->
         <div class="search-bar">
           <input type="text" id="textBox" name="search-text" placeholder="Search for a recipe" />
@@ -44,22 +45,18 @@
           </button>
         </div>
 
-<p class="sign">Sign in here</p>
+<p class="sign"><strong>Sign In Here</strong></p>
       <div class="login-container">  
     <div class="login" style="index: 1000"></div>
+    
                 
         <input type="text" id="username" placeholder="username">
         <input type="text" id="password" placeholder="******password">
-        <div class="login-items">
+        < class="login-items">
           <a href="/login" class="login-item" id="login">Login</a>
-        </div>
-        <div class="login-items">
-          <a href="/logout" class="login-item1" id="logout">Logout</a>
-              <button type="submit" id="signup">Sign Up
-                <i class="fas fa-user-plus"></i>
-              <a href="./partials/signup.handlebars"> 
-              </button>
-              </a>
+           <a href="/logout" class="login-item" id="logout">Logout</a>
+          <a href="/signup" class="login-item" id="signup">Sign Up</a>
+        
         </div>
       </div>
     </div>
@@ -68,6 +65,7 @@
     <div class="col md-8">
       <div class="container" id="recipe-container">
         <div class="row">
+               
           <div class="col-md-12">
             <h2>Recipes</h2>
           </div>
@@ -92,6 +90,19 @@
     </div>
   <script src="../public/js/logout.js">
   </script>
+  <script src="../public/js/search.js">
+  </script>
+  <footer class="footer">
+    <div class="container">
+      <div class"content has text-centered">
+        <div class="social">
+      <a href="#"><i class="fab fa-github fa-3x" aria-hidden="true"></i></a>
+        </div>
+        <strong>Curious Appetite</strong> by Ann Hixson, Nate Hanisch, and Dave Proto.
+        
+      </div>
+    </div>
+  </footer>
       
 
   </body>
