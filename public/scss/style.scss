@@ -1,17 +1,15 @@
 $font-stack: Cursive, sans-serif;
 $primary-color:  #333;
 
-// Path: public/scss/_base.scss
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font: 100% $font-stack;
   color: $primary-color;
   background-color: rgb(23, 63, 104);
-}
-
-// Path: public/scss/_components.scss
-.button {
-  padding: 10px;
-  color: $primary-color;
 }
 
 .title {
@@ -22,31 +20,39 @@ body {
 
 // Path: public/scss/_layout.scss
 .container {
-  max-width: 800px;
+  max-width: 80em;
+  display: flex;
   margin: 0 auto;
   padding: 0 20px;
 }
 
 #recipe-container {
+  max-width: 45em;
+  position: relative;
+  top: -10em;
+  left: 18em;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   border: solid;
   background-color: rgb(131, 131, 148);
   color: darken($primary-color, 10%);
   padding: 20px;
   font-size: 25px;
+  margin: 10px;
 }
 
 .search-bar {
   position: relative;
-  left: 0em;
-  top: 2.1em;
+  left: 30em;
+  top: 0em;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
   font-size: 1.4em;
   color: rgb(43, 5, 5);  
+  max-width: 30em;
+  align-items: center;
+  ;
 }
 
 #textBox {
@@ -55,8 +61,8 @@ body {
 }
 
 .cookie {
-  width: 100px;
-  height: 100px;
+  max-width: 30em;
+  max-height: 30em;
   margin: 20px;
   position: relative;
   left: 20em;
@@ -64,76 +70,88 @@ body {
   color: rgb(88, 54, 11)
 }
 
-
-  
-
-
-
 #view {
   position: relative;
-  left: 22em;
-  top: 9.4em;
+  left: 40em;
+  top: 0em;
   align-items: center;
-  font-size: 1.5em;
+  font-size: 1.1em;
   color: white;
   border: solid;
   background-color: rgb(242, 218, 218);
   color: darken($primary-color, 10%);
   padding: 5px;
-  
-
+  justify-self: auto;
+  display: flex;
+  max-width: 8em;
+  max-height: 2em;
 }
 
 #post {
   position: relative;
-  left: 50em;;
-  top: 8em;
+  left: 40em;;
+  top: 1em;
   align-items: center;
-  font-size: 1.5em;
+  font-size: 1.1em;
   color: white;
   border: solid;
   background-color: rgb(242, 218, 218);
   color: darken($primary-color, 10%);
   padding: 5px;
-
+  justify-self: auto;
+  display: flex;
+  max-width: 8em;
+  max-height: 2em;
 }
 
 .login {
     padding: 20px;
 }
 
-#username {
-    margin: 10px;
-}
-
-#password {
-    margin: 10px;
-}
-
 .banner-text {
+  //make animated 100% width of screen
+  width: 100%;
+  left: 100%;
+
+
+  animation: animate 15s linear infinite;
+  //white-space: nowrap;
+  overflow: hidden;
   position: absolute;
-  top: 5%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 3%;
   color: rgb(243, 242, 242);
-  font-size: 50px;
-  text-align: center;
+  font-size: 60px;
+  
+  @keyframes animate {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-180%);
+    }
+  }
+  color: rgb(250, 248, 248);
 }
+
 
 .banner-text1 {
-  position: absolute;
-  top: 15%;
-  left: 50%;
+  position: relative;
+  top: 24%;
+  left: 30%;
   transform: translate(-50%, -50%);
-  color: rgb(147, 93, 22);
+  color: rgb(229, 180, 115);
   font-size: 50px;
   text-align: center;
+}
+
+button {
+  padding: 0.5em;
 }
 
 #signup {
   position: absolute;
-  top: 35%;
-  left: 12%;
+  top: 2em;
+  left: 6em;
   transform: translate(-50%, -50%);
   color: white;
   font-size: 20px;
@@ -141,9 +159,9 @@ body {
 }
 
 .sign {
-  position: relative;
-  top: 30%;
-  left: 12%;
+  position: absolute;
+  top: 8em;
+  left: 7em;
   transform: translate(-50%, -50%);
   color: white;
   font-size: 25px;
@@ -154,8 +172,8 @@ body {
 
 #login{
   position: absolute;
-  bottom: 50%;
-  left: 18%;
+  bottom: 0.4em;
+  left: 4em;
   transform: translate(-50%, -50%);
   color: white;
   font-size: 20px;
@@ -163,42 +181,18 @@ body {
 }
 #logout{
   position: absolute;
-  top: 47%;
-  left: 5%;
+  bottom: 0.4em;
+  left: 10em;
   transform: translate(-50%, -50%);
   color: white;
   font-size: 20px;
   text-align: center;
 }
 
-#username {
+.login-container {
   position: relative;
-  top: 45%;
-  left: 5%;
-  transform: translate(-50%, -50%);
-  color: rgb(54, 3, 3);
-  font-size: 20px;
-  text-align: center;
-  margin: 15px;
-  font-family: fantasy;
-}
-
-#password {
-  position: relative;
-  top: 17%;
-  left: 4%;
-  transform: translate(-50%, -50%);
-  color: rgb(49, 4, 4);
-  font-size: 20px;
-  text-align: center;
-  margin: 15px;
-  font-family: fantasy;
-}
-
-.footer {
-  position: absolute;
-  bottom: 2%;
-  left: 88%;
+  top: 5em;
+  left: 9em;
   transform: translate(-50%, -50%);
   color: rgb(243, 242, 242);
   font-size: 20px;
@@ -210,16 +204,132 @@ body {
   padding: 5px;
   border-radius: 5%;
   background-color: rgb(103, 106, 127);
+  max-width: 14em;
+  max-height: 23em;
+  margin: 10px;
+  align-items: center;
+}
+
+
+
+#username {
+  position: relative;
+  top: 15%;
+  left: 5em;
+  transform: translate(-50%, -50%);
+  color: rgb(54, 3, 3);
+  font-size: 20px;
+  text-align: center;
+  margin: 15px;
+  font-family: fantasy;
+  margin: 2em;
+}
+
+#password {
+  position: relative;
+  top: 40%;
+  left: 5em;
+  transform: translate(-50%, -50%);
+  color: rgb(49, 4, 4);
+  font-size: 20px;
+  text-align: center;
+  margin: 15px;
+  font-family: fantasy;
+  margin: 2em;
+}
+
+.footer {
+  flex-direction: row;
+  position: relative;
+  bottom: -90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(243, 242, 242);
+  font-size: 20px;
+  text-align: center;
+  font-family: fantasy;
+  border: solid;
+  border-style: dotted;
+  border-color: rgb(233, 213, 213);
+  padding: 5px;
+  border-radius: 5%;
+  background-color: rgb(103, 106, 127);
+  max-width: 35em;
+  max-height: 10em;
+  margin: 10px;
 }
 
 .background {
-  position: absolute;
-  top: 10%;
-  right: 3%;
-  height: 300px;
-  width: 400px;
+  position: relative;
+  top: 50%;
+  right: 50%;
+  max-height: 25em;
+  max-width: 25em;
   border-radius: 8%;
+}
+
+@media (orientation: portrait) {
+  .banner-text {
+    font-size: 25px;
+    text-decoration: underline;
+  }
+  .banner-text1 {
+    font-size: 20px;
+    text-decoration: underline;
+  }
+#post {
+  flex-shrink: 50%;
+  flex-direction: column;
+  position: relative;
+}  
+#view {
+  flex-shrink: 50%;
+  flex-direction: column;
+  position: relative;
+}
+#recipe-container {
+  flex-direction: column;
+  position: relative;
+  top: 0em;
+  left: 0em;
+  align-items: center;
+  font-size: 1.1em;
+  color: white;
+  border: solid;
+  background-color: rgb(242, 218, 218);
+  color: darken($primary-color, 10%);
+  padding: 5px;
+  justify-self: auto;
+  display: flex;
+  max-width: 20em;
+  max-height: 30em;
+}
+.navbar-container {
+  flex-direction: column;
+  position: relative;
+  flex-wrap: wrap;
+  top: 0em;
+  left: 0em;
+  align-items: center;
+  font-size: 1.1em;
+  color: white;
+  border: solid;
+  background-color: rgb(242, 218, 218);
+  color: darken($primary-color, 10%);
+  padding: 5px;
+  justify-self: auto;
+  display: flex;
+  max-width: 10em;
+  max-height: 30em;
 }
 
 
 
+
+
+  
+
+  
+
+
+}
