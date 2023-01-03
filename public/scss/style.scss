@@ -111,10 +111,10 @@ body {
 .banner-text {
   //make animated 100% width of screen
   width: 100%;
-  left: 100%;
+  left: 27%;
 
 
-  animation: animate 15s linear infinite;
+  //animation: animate 15s linear infinite;
   //white-space: nowrap;
   overflow: hidden;
   position: absolute;
@@ -136,12 +136,12 @@ body {
 
 .banner-text1 {
   position: relative;
-  top: 24%;
-  left: 30%;
+  top: -25%;
+  left: 60%;
   transform: translate(-50%, -50%);
   color: rgb(229, 180, 115);
   font-size: 50px;
-  text-align: center;
+  
 }
 
 button {
