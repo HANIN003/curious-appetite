@@ -1,8 +1,5 @@
-// const { application } = require("express");
-
 const signupFormHandler = async (event) => {
   event.preventDefault();
-  // const signupForm = document.querySelector("#signup-form");
   const name = document.querySelector("#name-signup").value.trim();
   const email = document.querySelector("#email-signup").value.trim();
   const password = document.querySelector("#password-signup").value.trim();
@@ -15,7 +12,7 @@ const signupFormHandler = async (event) => {
     });
 
     if (response.ok) {
-      document.location.replace("/dashboard");
+      document.location.replace("/profile");
     } else {
       alert(response.statusText);
     }
@@ -26,9 +23,8 @@ const signupFormHandler = async (event) => {
 //   res.render("signup.handlebars");
 // });
 
-
-// Path: routes/api/user-routes.js  
-// app.route("../layouts/partials/signup").post((req, res) => {
+// Path: routes/api/user-routes.js
+// app.route("../layouts/partials/signup.").post((req, res) => {
 //   User.create({
 //     name: req.body.name,
 //     password: req.body.password,
@@ -47,8 +43,6 @@ const signupFormHandler = async (event) => {
 //       res.status(500).json(err);
 //     });
 // });
-
-
 
 document
   .querySelector(".signup-form")
