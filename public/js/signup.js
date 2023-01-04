@@ -1,4 +1,4 @@
-const { application } = require("express");
+// const { application } = require("express");
 
 const signupFormHandler = async (event) => {
   event.preventDefault();
@@ -22,31 +22,31 @@ const signupFormHandler = async (event) => {
   }
 };
 
-app.get("/", (req, res) => {
-  res.render("signup.handlebars");
-});
+// app.get("/", (req, res) => {
+//   res.render("signup.handlebars");
+// });
 
 
 // Path: routes/api/user-routes.js  
-app.route("../layouts/partials/signup").post((req, res) => {
-  User.create({
-    name: req.body.name,
-    password: req.body.password,
-  })
-    .then((dbUserData) => {
-      req.session.save(() => {
-        req.session.user_id = dbUserData.id;
-        req.session.name = dbUserData.name;
-        req.session.loggedIn = true;
+// app.route("../layouts/partials/signup").post((req, res) => {
+//   User.create({
+//     name: req.body.name,
+//     password: req.body.password,
+//   })
+//     .then((dbUserData) => {
+//       req.session.save(() => {
+//         req.session.user_id = dbUserData.id;
+//         req.session.name = dbUserData.name;
+//         req.session.loggedIn = true;
 
-        res.json(dbUserData);
-      });
-    })
-    .catch((err) => {
-      console.log(err);
-      res.status(500).json(err);
-    });
-});
+//         res.json(dbUserData);
+//       });
+//     })
+//     .catch((err) => {
+//       console.log(err);
+//       res.status(500).json(err);
+//     });
+// });
 
 
 
