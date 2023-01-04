@@ -105,9 +105,7 @@ body {
 
 .banner-text {
   width: 100%;
-  left: 100%;
-  -webkit-animation: animate 15s linear infinite;
-          animation: animate 15s linear infinite;
+  left: 27%;
   overflow: hidden;
   position: absolute;
   top: 3%;
@@ -134,12 +132,11 @@ body {
 
 .banner-text1 {
   position: relative;
-  top: 24%;
-  left: 30%;
+  top: -25%;
+  left: 60%;
   transform: translate(-50%, -50%);
   color: rgb(229, 180, 115);
   font-size: 50px;
-  text-align: center;
 }
 
 button {
