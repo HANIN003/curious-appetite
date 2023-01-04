@@ -1,21 +1,21 @@
 const newFormHandler = async (event) => {
   event.preventDefault();
 
-  const name = document.querySelector("#recipe-name").value.trim();
+  const name = document.querySelector("#name-recipe").value.trim();
   const ingredients = document
-    .querySelector("#recipe-ingredients")
+    .querySelector("#ingredients-recipe")
     .value.trim();
-  const directions = document.querySelector("#recipe-directions").value.trim();
+  const instructions = document.querySelector("#instructions-recipe").value.trim();
 
   if (name && ingredients && directions) {
     const response = await fetch(`api/recipe`, {
       method: "POST",
-      body: JSON.stringify({ name, ingredients, directions }),
+      body: JSON.stringify({ name, ingredients, instructions }),
       headers: { "Content-Type": "application/json" },
     });
 
     if (response.ok) {
-      document.location.replace("/dashboard");
+      document.location.replace("/profile");
     } else {
       alert("Failed to create new recipe!");
     }
@@ -31,7 +31,7 @@ const delButtonHandler = async (event) => {
     });
 
     if (response.ok) {
-      document.location.replace("/dashboard");
+      document.location.replace("/profile");
     } else {
       alert("Failed to delete recipe!");
     }
