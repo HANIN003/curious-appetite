@@ -2,7 +2,7 @@ const { application } = require("express");
 
 const signupFormHandler = async (event) => {
   event.preventDefault();
-  const signupForm = document.querySelector("#signup-form");
+  // const signupForm = document.querySelector("#signup-form");
   const name = document.querySelector("#name-signup").value.trim();
   const email = document.querySelector("#email-signup").value.trim();
   const password = document.querySelector("#password-signup").value.trim();
