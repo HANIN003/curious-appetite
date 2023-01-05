@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -20,70 +21,70 @@
       crossorigin="anonymous"
     ></script>
   </head>
+
   <body>
       <a class="cookie" href="/"><i class="fa fa-cutlery fa-5x"></i></a>
-      {{!-- <style "color: black"></style> --}}
       <div class="navbar">
-      <div class="navbar-container">
-      <div class="navbar-items">
+        <div class="navbar-container">
+          <div class="navbar-items">
 
-        <div class="search-bar">
-          <a href="/search" class="navbar-item" id="search">
-          <input type="text" id="textBox" name="search-text" placeholder="Search for a recipe" />
-          <button type="submit" id="searchButton"> 
-            <i class="fas fa-search"></i></a>
-          </button>
-        </div>
+            <div class="search-bar">
+              {{!-- Not a route --}}
+              {{!-- <a href="/search" class="navbar-item" id="search"> --}}
+              <input type="text" id="textBox" name="search-text" placeholder="Search for a recipe" />
+              <button type="submit" id="searchButton"> 
+                <i class="fas fa-search"></i></a>
+              </button>
+            </div>
 
        
           
-      <a href="/recipes" class="navbar-item" id="view">View Recipes</a>
-      </div>
+            <a href="/recipes" class="navbar-item" id="view">View Recipes</a>
+          </div>
 
-        <a href="/post" class="navbar-item" id="post">Post a Recipe!</a>
+          {{!-- Not a route --}}
+          {{!-- <a href="/post" class="navbar-item" id="post">Post a Recipe!</a> --}}
+        </div>
+        <div>
+          {{#if logged_in}}
+            <a href="/profile">My Dashboard</a> |
+            <button id="logout">Logout</button>
+          {{else}}
+            <a href="/login">Login</a>
+          {{/if}}
+        </div>
+        
       </div>
-       {{#if logged_in}}
-        <a href="/profile" class="navbar-item">My Dashboard</a> |
-        {{!-- <button id="logout">Logout</button> --}}
-        {{else}}
-        <a href="/login" class="navbar-item"></a>
-        {{/if}}
-    </div>
 
     <div class="banner">
       <span class="banner-text">Curious Appetite.......Find Your Next Favorite Recipe!</span>
     </div>
     {{!-- <img src="/images/background.jpg" alt="food" class="background" /> --}}
 
-    <div class="col md-8">
+    {{!-- <div class="col md-8">
       <div class="recipe-card" id="recipe-card">
-        <div class="row">
-               
+        <div class="row">   
           <div class="col-md-12">
             <h2>Recipes</h2>
           </div>
         </div>
+
         <div class="row">
           <div class="col-md-12">
             <div class="recipe-card">
-              <div class="card-body">
-            {{{body}}}
+              <div class="card-body"> --}}
+
+
+            <main>
+              {{{body}}}
+            </main>    
+            
                 
                 
-                {{!-- <a href="./view" class="btn btn-primary">View Comments</a> --}}
               </div>
             </div>
           </div>
         </div>
-      
-    
-  
-
-    
-        
-
-        
-
 
     </div>
   </div>
@@ -99,15 +100,10 @@
     </div>
   </footer>
  --}}
-      
-  {{!-- {{#if logged_in}}
-  <script src="../../public/js/logout.js"></script>
-  {{/if}}
-  <script src="../../public/js/login.js"></script>
-  {{!-- <script src="../public/js/logout.js">
-  </script> --}}
-  <script src="../public/js/search.js">
-  </script> --}}
 
+    {{#if logged_in}}
+      <script src="/js/logout.js"></script>
+    {{/if}}
   </body>
+
 </html>
