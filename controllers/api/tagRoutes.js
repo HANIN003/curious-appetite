@@ -1,3 +1,5 @@
+// I don't think this does anything
+
 const router = require('express').Router();
 const { Tag, Recipe, RecipeTag } = require('../../models');
 
