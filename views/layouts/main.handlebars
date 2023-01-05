@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Curious Appetite</title>
+
     <link rel="stylesheet" href="/scss/reset.css">
     <link
       rel="stylesheet"
@@ -15,6 +16,7 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="/scss/style.css" />
+
     <script
       src="https://code.jquery.com/jquery-3.6.2.min.js"
       integrity="sha256-2krYZKh//PcchRtd+H+VyyQoZ/e3EcrkxhM8ycwASPA="
@@ -23,87 +25,63 @@
   </head>
 
   <body>
-      <a class="cookie" href="/"><i class="fa fa-cutlery fa-5x"></i></a>
-      <div class="navbar">
-        <div class="navbar-container">
-          <div class="navbar-items">
-
-            <div class="search-bar">
-              {{!-- Not a route --}}
-              {{!-- <a href="/search" class="navbar-item" id="search"> --}}
-              <input type="text" id="textBox" name="search-text" placeholder="Search for a recipe" />
-              <button type="submit" id="searchButton"> 
-                <i class="fas fa-search"></i></a>
-              </button>
-            </div>
-
-       
-          
-            <a href="/recipes" class="navbar-item" id="view">View Recipes</a>
-          </div>
-
-          {{!-- Not a route --}}
-          {{!-- <a href="/post" class="navbar-item" id="post">Post a Recipe!</a> --}}
+    <div>
+      <header>
+        <div class="banner">
+          <span class="banner-text">Curious Appetite.......Find Your Next Favorite Recipe!</span>
         </div>
-        <div>
-          {{#if logged_in}}
-            <a href="/profile">My Dashboard</a> |
-            <button id="logout">Logout</button>
-          {{else}}
-            <a href="/login">Login</a>
-          {{/if}}
-        </div>
-        
-      </div>
-
-    <div class="banner">
-      <span class="banner-text">Curious Appetite.......Find Your Next Favorite Recipe!</span>
-    </div>
-    {{!-- <img src="/images/background.jpg" alt="food" class="background" /> --}}
-
-    {{!-- <div class="col md-8">
-      <div class="recipe-card" id="recipe-card">
-        <div class="row">   
-          <div class="col-md-12">
-            <h2>Recipes</h2>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-md-12">
-            <div class="recipe-card">
-              <div class="card-body"> --}}
-
-
-            <main>
-              {{{body}}}
-            </main>    
-            
-                
-                
+        <div class="navbar">
+          <div class="navbar-container">
+            <div class="navbar-items">
+              <a class="cookie" href="/"><i class="fa fa-cutlery fa-5x"></i></a>
+              <div class="search-bar">
+                {{!-- Not a route --}}
+                {{!-- <a href="/search" class="navbar-item" id="search"> --}}
+                <input type="text" id="textBox" name="search-text" placeholder="Search for a recipe" />
+                <button type="submit" id="searchButton"> 
+                  <i class="fas fa-search"></i></a>
+                </button>
+              </div>
+              <a href="/recipes" class="navbar-item" id="view">View Recipes</a>
+              <div>
+                {{#if logged_in}}
+                  <button><a href="/profile">My Dashboard</a></button> |
+                  <button id="logout">Logout</button>
+                {{else}}
+                  <a href="/login">Login</a>
+                {{/if}}
               </div>
             </div>
           </div>
         </div>
+      </header>
 
-    </div>
-  </div>
-    
-  {{!-- <footer class="footer">
-      <div class"content has text-centered">
-        <div class="social">
-      <a href="http://www.github.com"><i class="fab fa-github fa-3x" aria-hidden="true"></i></a>
+      {{!-- <div class="col md-8">
+        <div class="recipe-card" id="recipe-card">
+          <div class="row">   
+            <div class="col-md-12">
+              <h2>Recipes</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="recipe-card">
+                <div class="card-body"> --}}
+                  <main>
+                    {{{body}}}
+                  </main>
+                {{!-- </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <strong>Curious Appetite</strong> by Ann Hixson, Nate Hanisch, and Dave Proto.
-        
-      </div>
+      </div> --}}
     </div>
-  </footer>
- --}}
 
     {{#if logged_in}}
       <script src="/js/logout.js"></script>
     {{/if}}
+
   </body>
 
 </html>

@@ -19,28 +19,39 @@ app.engine("handlebars", hbs.engine);
 app.set("view engine", "handlebars");
 
 //Sessions
-app.use(
-  session({
-    secret: "secret",
-    resave: false,
-    saveUninitialized: true,
-    store: new SequelizeStore({ db: sequelize }),
+const sess = {
+  secret: 'Super secret secret',
+  cookie: {
+    maxAge: 3000000,
+    httpOnly: true,
+    secure: false,
+    sameSite: 'strict',
+  },
+  resave: false,
+  saveUninitialized: true,
+  store: new SequelizeStore({
+    db: sequelize
   })
-);
+};
+
+app.use(session(sess));
+
 app.use(bodyParser.urlencoded({ extended: false }));
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "public")));
 
 app.use(routes);
 
-app.use((req, res, next) => {
-  if (!req.session.user_id) {
-    res.redirect("/login");
-  } else {
-    next();
-  }
-});
+// What is this doing?
+// app.use((req, res, next) => {
+//   if (!req.session.user_id) {
+//     res.redirect("/login");
+//   } else {
+//     next();
+//   }
+// });
 
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () =>
