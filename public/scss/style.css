@@ -1,318 +1,242 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
 }
 
 body {
-  font: 100% Cursive, sans-serif;
-  color: #333;
-  background-color: rgb(23, 63, 104);
-}
-
-.title {
-  color: #333;
-  font-size: 40px;
-  text-align: center;
-}
-
-.container {
-  max-width: 80em;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#3c2121), to(rgb(169, 110, 110)));
   display: flex;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-#recipe-container {
-  max-width: 45em;
-  position: relative;
-  top: -10em;
-  left: 18em;
-  display: flex;
-  flex-wrap: wrap;
+  align-items: center;
+  font: 100% Helvetica, sans-serif;
+  color: rgb(241, 229, 229);
+  background-color: rgb(67, 44, 122);
   justify-content: space-around;
-  border: solid;
-  background-color: rgb(131, 131, 148);
-  color: #1a1a1a;
-  padding: 20px;
-  font-size: 25px;
-  margin: 10px;
 }
 
 .search-bar {
+  padding: 2px;
+  text-align: center;
+  color: white;
   position: relative;
-  left: 30em;
-  top: 0em;
-  display: flex;
-  flex-direction: row;
-  font-size: 1.4em;
-  color: rgb(43, 5, 5);
-  max-width: 30em;
-  align-items: center;
+  top: 8em;
+  right: 15em;
+  width: 15em;
+  height: 15em;
 }
 
 #textBox {
-  z-index: 1000;
-  font-size: 20px;
-}
-
-.cookie {
-  max-width: 30em;
-  max-height: 30em;
-  margin: 20px;
-  position: relative;
-  left: 20em;
-  top: 2em;
-  color: rgb(88, 54, 11);
-}
-
-#view {
-  position: relative;
-  left: 40em;
-  top: 0em;
-  align-items: center;
-  font-size: 1.1em;
-  color: white;
-  border: solid;
-  background-color: rgb(242, 218, 218);
-  color: #1a1a1a;
-  padding: 5px;
-  justify-self: auto;
-  display: flex;
-  max-width: 8em;
-  max-height: 2em;
-}
-
-#post {
-  position: relative;
-  left: 40em;
-  top: 1em;
-  align-items: center;
-  font-size: 1.1em;
-  color: white;
-  border: solid;
-  background-color: rgb(242, 218, 218);
-  color: #1a1a1a;
-  padding: 5px;
-  justify-self: auto;
-  display: flex;
-  max-width: 8em;
-  max-height: 2em;
-}
-
-.login {
-  padding: 20px;
-}
-
-.banner-text {
-  width: 100%;
-  left: 27%;
-  overflow: hidden;
-  position: absolute;
-  top: 3%;
-  color: rgb(243, 242, 242);
-  font-size: 60px;
-  color: rgb(250, 248, 248);
-}
-@-webkit-keyframes animate {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-180%);
-  }
-}
-@keyframes animate {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-180%);
-  }
-}
-
-.banner-text1 {
-  position: relative;
-  top: -25%;
-  left: 60%;
-  transform: translate(-50%, -50%);
-  color: rgb(229, 180, 115);
-  font-size: 50px;
-}
-
-button {
-  padding: 0.5em;
-}
-
-#signup {
-  position: absolute;
-  top: 2em;
-  left: 6em;
-  transform: translate(-50%, -50%);
-  color: white;
-  font-size: 20px;
-  text-align: center;
-}
-
-.sign {
-  position: absolute;
-  top: 8em;
-  left: 7em;
-  transform: translate(-50%, -50%);
-  color: white;
-  font-size: 25px;
-  text-align: center;
-  text-decoration: underline;
-  font-family: fantasy;
-}
-
-#login {
-  position: absolute;
-  bottom: 0.4em;
-  left: 4em;
-  transform: translate(-50%, -50%);
-  color: white;
-  font-size: 20px;
-}
-
-#logout {
-  position: absolute;
-  bottom: 0.4em;
-  left: 10em;
-  transform: translate(-50%, -50%);
-  color: white;
-  font-size: 20px;
-  text-align: center;
-}
-
-.login-container {
-  position: relative;
+  height: 2em;
+  width: 10em;
   top: 5em;
-  left: 9em;
-  transform: translate(-50%, -50%);
-  color: rgb(243, 242, 242);
-  font-size: 20px;
-  text-align: center;
-  font-family: fantasy;
-  border: solid;
-  border-style: dotted;
-  border-color: rgb(233, 213, 213);
-  padding: 5px;
-  border-radius: 5%;
-  background-color: rgb(103, 106, 127);
-  max-width: 14em;
-  max-height: 23em;
-  margin: 10px;
-  align-items: center;
+  left: 5em;
 }
 
-#username {
-  position: relative;
-  top: 15%;
-  left: 5em;
-  transform: translate(-50%, -50%);
-  color: rgb(54, 3, 3);
-  font-size: 20px;
+#searchButton {
+  background-color: rgb(149, 158, 167);
+  color: white;
+  padding: 2px 4px;
   text-align: center;
-  margin: 15px;
-  font-family: fantasy;
-  margin: 2em;
-}
-
-#password {
-  position: relative;
-  top: 40%;
-  left: 5em;
-  transform: translate(-50%, -50%);
-  color: rgb(49, 4, 4);
-  font-size: 20px;
-  text-align: center;
-  margin: 15px;
-  font-family: fantasy;
-  margin: 2em;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 10px;
+  width: 5em;
+  height: 2em;
 }
 
 .footer {
-  flex-direction: row;
+  background-color: rgb(23, 63, 104);
+  padding: 20px;
+  color: white;
   position: relative;
-  bottom: -90%;
+  top: 50em;
+  width: 100%;
+  text-align: center;
+}
+
+#recipe-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(100, 41, 42);
+  position: absolute;
+  top: 20em;
+  right: 30%;
+  max-width: 38em;
+  max-height: 35em;
+  font-size: 18px;
+}
+
+#view {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 1em auto;
+  width: 7em;
+  height: 2em;
+  background-color: rgb(149, 158, 167);
+  position: relative;
+  top: -6em;
+  left: 5em;
+}
+
+#post {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 7em;
+  height: 2em;
+  background-color: rgb(149, 158, 167);
+  position: relative;
+  top: -4em;
+  left: 5em;
+}
+
+.banner-text {
+  position: absolute;
+  top: 5%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: rgb(243, 242, 242);
-  font-size: 20px;
   text-align: center;
-  font-family: fantasy;
-  border: solid;
-  border-style: dotted;
-  border-color: rgb(233, 213, 213);
-  padding: 5px;
-  border-radius: 5%;
-  background-color: rgb(103, 106, 127);
-  max-width: 35em;
-  max-height: 10em;
-  margin: 10px;
+  color: white;
+  font-size: 2em;
 }
 
-.background {
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 38em;
+  height: 35em;
+  font-family: sans-serif;
+  background: rgb(73, 12, 16);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
-  top: 50%;
-  right: 50%;
-  max-height: 25em;
-  max-width: 25em;
-  border-radius: 8%;
+  bottom: 1.1em;
 }
 
-@media (orientation: portrait) {
-  .banner-text {
-    font-size: 25px;
-    text-decoration: underline;
-  }
-  .banner-text1 {
-    font-size: 20px;
-    text-decoration: underline;
-  }
-  #post {
-    flex-shrink: 50%;
-    flex-direction: column;
-    position: relative;
-  }
-  #view {
-    flex-shrink: 50%;
-    flex-direction: column;
-    position: relative;
-  }
-  #recipe-container {
-    flex-direction: column;
-    position: relative;
-    top: 0em;
-    left: 0em;
-    align-items: center;
-    font-size: 1.1em;
-    color: white;
-    border: solid;
-    background-color: rgb(242, 218, 218);
-    color: #1a1a1a;
-    padding: 5px;
-    justify-self: auto;
-    display: flex;
-    max-width: 20em;
-    max-height: 30em;
-  }
-  .navbar-container {
-    flex-direction: column;
-    position: relative;
-    flex-wrap: wrap;
-    top: 0em;
-    left: 0em;
-    align-items: center;
-    font-size: 1.1em;
-    color: white;
-    border: solid;
-    background-color: rgb(242, 218, 218);
-    color: #1a1a1a;
-    padding: 5px;
-    justify-self: auto;
-    display: flex;
-    max-width: 10em;
-    max-height: 30em;
-  }
+.login-card {
+  width: 30em;
+  height: 34em;
+  box-shadow: 0 0 40px 20px rgba(103, 37, 37, 0.26);
+  perspective: 1000px;
+  align-self: center;
+  padding-top: 3em;
+}
+
+.inner-box {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+}
+
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 90%;
+  background-position: center;
+  background-size: cover;
+  background-image: linear-gradient(rgba(138, 40, 40, 0.8), rgba(63, 38, 49, 0.8));
+  padding: 55px;
+  box-sizing: border-box;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+}
+
+.input-box {
+  width: 100%;
+  background: transparent;
+  border: 1px solid #fff;
+  margin: 6px 0;
+  height: 32px;
+  border-radius: 20px;
+  padding: 0 10px;
+  box-sizing: border-box;
+  outline: none;
+  text-align: center;
+  color: #fff;
+}
+
+::-moz-placeholder {
+  color: rgb(248, 244, 244);
+  font-size: 18px;
+}
+
+:-ms-input-placeholder {
+  color: rgb(248, 244, 244);
+  font-size: 18px;
+}
+
+::placeholder {
+  color: rgb(248, 244, 244);
+  font-size: 18px;
+}
+
+button {
+  width: 100%;
+  background: transparent;
+  border: 1px solid #fff;
+  margin: 35px 0 10px;
+  height: 32px;
+  font-size: 12px;
+  border-radius: 20px;
+  padding: 0 10px;
+  box-sizing: border-box;
+  outline: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.submit-btn {
+  position: relative;
+}
+
+.submit-btn::after {
+  content: "➤";
+  color: #333;
+  line-height: 32px;
+  font-size: 17px;
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  background: #fff;
+  position: absolute;
+  right: -1px;
+  top: -1px;
+}
+
+span {
+  font-size: 13px;
+  margin-left: 10px;
+}
+
+.card .btn {
+  margin-top: 70px;
+}
+
+.card a {
+  color: rgb(228, 213, 213);
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  font-size: 16px;
+  margin-top: 3px;
 }/*# sourceMappingURL=style.css.map */
