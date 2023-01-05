@@ -3,7 +3,11 @@ const sequelize = require('../config/connection');
 const bcrypt = require('bcrypt');
 //const User = require('./userRoutes');
 
-class User extends Model {}
+class User extends Model {
+    checkPassword(loginPw) {
+        return bcrypt.compareSync(loginPw, this.password);
+    }
+}
 
 User.init(
     {
@@ -51,16 +55,17 @@ User.init(
     }
 );
 
-User.prototype.checkPassword = function (loginPw) {
-    return bcrypt.compareSync(loginPw, this.password);
-};
+// What is this?
+// User.prototype.checkPassword = function (loginPw) {
+//     return bcrypt.compareSync(loginPw, this.password);
+// };
 
-sequelize.sync({ force: false })
-.then(() => {
-    console.log('Created our tables');
-})
-.catch((err) => {
-    console.log(err);
-});
+// sequelize.sync({ force: false })
+// .then(() => {
+//     console.log('Created our tables');
+// })
+// .catch((err) => {
+//     console.log(err);
+// });
 
 module.exports = User;
