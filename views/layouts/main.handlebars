@@ -21,7 +21,7 @@
     ></script>
   </head>
   <body>
-      <a class="cookie" href="/"><i class="fa-solid fa-cookie-bite fa-8x"></i></a>
+      <a class="cookie" href="/"><i class="fa fa-cutlery fa-5x"></i></a>
       {{!-- <style "color: black"></style> --}}
       <div class="navbar">
       <div class="navbar-container">
@@ -46,33 +46,17 @@
         <a href="/profile" class="navbar-item">My Dashboard</a> |
         {{!-- <button id="logout">Logout</button> --}}
         {{else}}
-        <a href="/login" class="navbar-item">Login</a>
+        <a href="/login" class="navbar-item"></a>
         {{/if}}
     </div>
 
     <div class="banner">
       <span class="banner-text">Curious Appetite.......Find Your Next Favorite Recipe!</span>
     </div>
-    {{!-- <!--<img src="/images/background.jpg" alt="food" class="background" />--> --}}
+    {{!-- <img src="/images/background.jpg" alt="food" class="background" /> --}}
 
-{{!-- <p class="sign"><strong>Sign In</strong><i class="fa-solid fa-arrow-down"></i></p>
-      <div class="login-container">  
-    <div class="login" style="index: 1000"></div>
-    
-                
-        <input type="text" id="username" placeholder="username">
-        <input type="text" id="password" placeholder="******password">
-        <class="login-items">
-          <a href="/login" class="login-item" id="login">Login</a>
-           <a href="/logout" class="login-item" id="logout">Logout</a>
-          <a href="/signup" class="login-item" id="signup">Sign Up</a>
-        
-        </div> --}}
-
-
-      
     <div class="col md-8">
-      <div class="container" id="recipe-container">
+      <div class="recipe-card" id="recipe-card">
         <div class="row">
                
           <div class="col-md-12">
@@ -81,10 +65,11 @@
         </div>
         <div class="row">
           <div class="col-md-12">
-            <div class="card">
+            <div class="recipe-card">
               <div class="card-body">
+            {{{body}}}
                 
-                </p>
+                
                 {{!-- <a href="./view" class="btn btn-primary">View Comments</a> --}}
               </div>
             </div>
@@ -100,11 +85,10 @@
         
 
 
-      {{{ body }}}
     </div>
   </div>
     
-  <footer class="footer">
+  {{!-- <footer class="footer">
       <div class"content has text-centered">
         <div class="social">
       <a href="http://www.github.com"><i class="fab fa-github fa-3x" aria-hidden="true"></i></a>
@@ -114,6 +98,7 @@
       </div>
     </div>
   </footer>
+ --}}
       
   {{!-- {{#if logged_in}}
   <script src="../../public/js/logout.js"></script>
