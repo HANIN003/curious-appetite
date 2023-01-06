@@ -5,13 +5,29 @@
 }
 
 body {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#3c2121), to(rgb(169, 110, 110)));
+  background-image: url("../images/background.jpg");
   display: flex;
   align-items: center;
   font: 100% Helvetica, sans-serif;
   color: rgb(241, 229, 229);
   background-color: rgb(67, 44, 122);
   justify-content: space-around;
+}
+
+html {
+  min-height: 100%;
+  background-image: url("../images/background.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.cutlery {
+  position: relative;
+  top: 1em;
+  left: 0em;
+  width: 2em;
+  height: 2em;
 }
 
 .search-bar {

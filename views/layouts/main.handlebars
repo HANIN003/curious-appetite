@@ -17,65 +17,50 @@
     />
     <link rel="stylesheet" href="/scss/style.css" />
 
-    <script
+    <script      
       src="https://code.jquery.com/jquery-3.6.2.min.js"
       integrity="sha256-2krYZKh//PcchRtd+H+VyyQoZ/e3EcrkxhM8ycwASPA="
       crossorigin="anonymous"
     ></script>
   </head>
-
   <body>
-    <div>
-      <header>
-        <div class="banner">
-          <span class="banner-text">Curious Appetite.......Find Your Next Favorite Recipe!</span>
-        </div>
-        <div class="navbar">
-          <div class="navbar-container">
-            <div class="navbar-items">
-              <a class="cookie" href="/"><i class="fa fa-cutlery fa-5x"></i></a>
-              <div class="search-bar">
-                {{!-- Not a route --}}
-                {{!-- <a href="/search" class="navbar-item" id="search"> --}}
-                <input type="text" id="textBox" name="search-text" placeholder="Search for a recipe" />
-                <button type="submit" id="searchButton"> 
-                  <i class="fas fa-search"></i></a>
-                </button>
-              </div>
-              <a href="/recipes" class="navbar-item" id="view">View Recipes</a>
-              <div>
-                {{#if logged_in}}
-                  <button><a href="/profile">My Dashboard</a></button> |
-                  <button id="logout">Logout</button>
-                {{else}}
-                  <button><a href="/login">Login</a></button>
-                {{/if}}
-              </div>
+    <header class="header">
+      <div class="banner">
+        <span class="banner-text">Curious Appetite.......Find Your Next Favorite Recipe!</span>
+      </div>
+      </header> 
+      <div class="navbar">
+        <div class="navbar-container">
+          <div class="navbar-items">
+            <a class="cutlery" href="/"><i class="fa fa-cutlery fa-5x"></i></a>
+            <div class="search-bar">
+              {{!-- Not a route --}}
+              {{!-- <a href="/search" class="navbar-item" id="search"> --}}
+              <input type="text" id="textBox" name="search-text" placeholder="Search for a recipe" />
+              <button type="submit" id="searchButton"> 
+                <i class="fas fa-search"></i></a>
+              </button>
+            </div>
+            <a href="/recipes" class="navbar-item" id="view">View Recipes</a>
+            <div>
+              <a href="/post" class="navbar-item" id="post">Post a Recipe!</a>
+              {{#if logged_in}}
+                <button><a href="/profile">My Dashboard</a></button> |
+                <button id="logout">Logout</button>
+              {{else}}
+                <button><a href="/login">Login</a></button>
+              {{/if}}
             </div>
           </div>
         </div>
-      </header>
+      </div>
+      <div class="main">
+        <main>
 
-      {{!-- <div class="col md-8">
-        <div class="recipe-card" id="recipe-card">
-          <div class="row">   
-            <div class="col-md-12">
-              <h2>Recipes</h2>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-12">
-              <div class="recipe-card">
-                <div class="card-body"> --}}
-                  <main>
+                        
                     {{{body}}}
+     {{!-- <img src="../images/background.jpg" --}}
                   </main>
-                {{!-- </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> --}}
     </div>
 
     {{#if logged_in}}

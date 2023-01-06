@@ -6,14 +6,45 @@ $primary-color:  rgb(241, 229, 229);
   padding: 0;
 }
 
-body {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#3c2121), to(rgb(169, 110, 110)));
+body, html {
+  height: 100%;
+  // background-image: url("../images/background.jpg");
   display: flex;
   align-items: center;
   font: 100% $font-stack;
   color: $primary-color;
   background-color: rgb(67, 44, 122);
   justify-content: space-around;
+}
+
+.bg {
+  height: 100%;
+  background-image: url("../images/background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+header{
+  background-color: rgb(23, 63, 104);
+  padding: 20px;
+  color: white;
+  position: relative;
+  top: 0em;
+  width: 100%;
+  text-align: center;
+  height: 4em;
+}
+
+.cutlery {
+  position: relative;
+  top: 1em;
+  left: -20em;
+  width: 2em;
+  height: 2em;
+
+
 }
 
 .search-bar {
