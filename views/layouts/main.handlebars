@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Curious Appetite</title>
 
-    <link rel="stylesheet" href="/scss/reset.css" />
+    <link rel="stylesheet" href="/scss/reset.css">
+    <link rel="stylesheet" href="/scss/jass.css">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
@@ -16,13 +17,12 @@
     />
     <link rel="stylesheet" href="/scss/style.css" />
 
-    <script
+    <script      
       src="https://code.jquery.com/jquery-3.6.2.min.js"
       integrity="sha256-2krYZKh//PcchRtd+H+VyyQoZ/e3EcrkxhM8ycwASPA="
       crossorigin="anonymous"
     ></script>
   </head>
-
   <body>
     <div>
       <header>
@@ -60,28 +60,13 @@
             </div>
           </div>
         </div>
-      </header>
-
-      {{! <div class="col md-8">
-        <div class="recipe-card" id="recipe-card">
-          <div class="row">   
-            <div class="col-md-12">
-              <h2>Recipes</h2>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-12">
-              <div class="recipe-card">
-                <div class="card-body"> }}
-      <main>
-        {{{body}}}
-      </main>
-      {{! </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> }}
+      </div>
+      <div class="main">
+        <main>
+         
+                    {{{body}}}
+     {{!-- <img src="../images/background.jpg" --}}
+                  </main>
     </div>
 
     {{#if logged_in}}
