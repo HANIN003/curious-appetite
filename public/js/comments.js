@@ -1,49 +1,54 @@
-const commentFormHandler = async (event) => {
-  event.preventDefault();
+document.getElementById('recipeId').style.display = "none";
 
-  const comment = document
-    .querySelector('input[name="comment-body"]')
-    .value.trim();
+const newFormHandler = async (event) => {
+    event.preventDefault();
+  
+    const content = document.querySelector('#comment-content').value.trim();
+    const recipeId = document.querySelector('#recipeId').innerHTML;
+  
+    if (content) {
+      const response = await fetch(`/api/comments`, {
+        method: 'POST',
+        body: JSON.stringify({ content, recipeId }),
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
 
-  const postId = window.location.toString().split("/")[
-    window.location.toString().split("/").length - 1
-  ];
-
-  if (comment) {
-    const response = await fetch(`/api/comment`, {
-      method: "POST",
-      body: JSON.stringify({ postId, comment }),
-      headers: { "Content-Type": "application/json" },
-    });
-
-    if (response.ok) {
-      document.location.reload();
-    } else {
-      alert("Failed to add comment!");
+      if (response.ok) {
+        document.location.reload();
+      } else {
+        alert('Failed to create comment');
+      }
     }
-  }
-};
-
-const delButtonHandler = async (event) => {
-  if (event.target.hasAttribute("data-id")) {
-    const id = event.target.getAttribute("data-id");
-
-    const response = await fetch(`/api/comment/${id}`, {
-      method: "DELETE",
-    });
-
-    if (response.ok) {
-      document.location.reload();
-    } else {
-      alert("Failed to delete comment!");
-    }
-  }
 };
 
 document
-  .querySelector(".new-comment-form")
-  .addEventListener("submit", commentFormHandler);
+    .querySelector('.new-comment-form')
+    .addEventListener('submit', newFormHandler);
 
-document
-  .querySelector(".comment-list")
-  .addEventListener("click", delButtonHandler);
+
+// CURRENTLY NON-FUNCTIONAL
+    // const delButtonHandler = async (event) => {
+    //   if (event.target.hasAttribute("data-id")) {
+    //     const id = event.target.getAttribute("data-id");
+    
+    //     const response = await fetch(`/api/comment/${id}`, {
+    //       method: "DELETE",
+    //     });
+    
+    //     if (response.ok) {
+    //       document.location.reload();
+    //     } else {
+    //       alert("Failed to delete comment!");
+    //     }
+    //   }
+    // };
+    
+    
+    
+    // document
+    //   .querySelector(".comment-list")
+    //   .addEventListener("click", delButtonHandler);
+
+
