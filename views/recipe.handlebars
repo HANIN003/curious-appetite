@@ -1,50 +1,38 @@
-<div class="card">
-  <div class="card-body">
-    <h5 class="card-title">{{name}}</h5>
-    <p class="card-text">{{ingredients}}</p>
-    <p class="card-text">{{instructions}}</p>
-    <a href="#" class="btn btn-primary">View Comments</a>
+<div class="text-center">
+  <h2 class="blog-post-title">{{title}}</h2>
+  <p class="blog-post-user">Posted by {{user.name}}
+  </p>
+  <h3>Ingredients</h3>
+  <p>{{ingredients}}</p>
+  <h3>Method</h3>
+  <p>{{method}}</p>
+</div>
+
+<div class="flex-column justify-center">
+  <h3>Comments</h3>
+    {{#each comments as |comment|}}
+    {{> comment-details}}
+    {{/each}}
+  <div>
+    {{!-- Necessary for adding comments --}}
+    <p id="recipeId">{{recipeId}}</p>
+
+    {{#if logged_in}}
+      <div>
+        <form class="form new-comment-form">
+          <div class="form-group">
+            <label for="comment-content"><h4>Add a Comment:</h4></label>
+            <textarea class="form-input" id="comment-content" name="comment-content"></textarea>
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary">Comment</button>
+          </div>
+        </form>
+      </div>
+    {{else}}
+      <h4>Sign in to leave a comment</h4>
+    {{/if}}
   </div>
 </div>
 
-
-
-
-{{!-- <div class="row">
-    <div class="col-md-6">
-        <h2>Add Your Recipe!</h2>
-        < class="form" recipe-form">
-            <div class="form-group">
-                <label for="name-recipe">Name:</label>
-                <input class="form-input" type="text" id="name-recipe" placeholder="Enter your recipe" />
-            </div>
-            <div class="form-group">
-                <label for="ingredients-recipe">Ingredients:</label>
-                <input class="form-input"> type="text" id="ingredients-recipe" placeholder="Enter your ingredients" />
-            </div>
-
-            <div class="form-group">
-                <label for="instructions-recipe">Instructions:</label>
-                <input class="form-input"> type="text" id="instructions-recipe" placeholder="Enter your instructions" />
-            </div>
-            <div class="form-group">
-                <button class="btn btn-primary" type="submit">Add Recipe</button>
-            </div>
-        </form>
-        <div class="column" id="recipesbody">
-            {{{#each recipes}}}
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title
-                    ">{{name}}</h5>
-                    <p class="card-text">{{ingredients}}</p>
-                    <p class="card-text">{{instructions}}</p>
-                    <a href="#" class="btn btn-primary">View Comments</a>
-                    {{{/each}}}
-
-        </div>
-    </div>
-</div>
-
-<script src="../public/js/add-recipe.js"></script> --}}
-
+<script src="/js/comments.js"></script>
