@@ -5,7 +5,8 @@
 }
 
 body {
-  background-image: url('../images/food-pic.jpg');
+  background-image: url('../images/background.jpg');
+  background-size: cover;
   background-repeat: no-repeat;
   /* -webkit-gradient(linear, left top, left bottom, from(#3c2121), to(rgb(169, 110, 110))); */
   display: flex;
@@ -22,9 +23,6 @@ body {
   color: black;
   padding: 20px;
 }
-
-
-
 
 .search-bar {
   padding: 2px;
