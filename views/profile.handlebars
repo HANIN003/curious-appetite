@@ -1,6 +1,7 @@
+<div class="dashboard">
 <div class="row">
   <div class="col-auto">
-    <h2>Welcome, {{name}}!</h2>
+    <h2>Welcome, {{user.name}}!</h2>
   </div>
 </div>
 
@@ -49,7 +50,9 @@
       <h3>Your Recipes</h3>
 
       {{#each recipes as |recipe|}}
-        <div class="row mb-2">
+        {{> recipe-details}}
+        {{!-- CURRENTLY NON-FUNCTIONAL --}}
+        {{!-- <div class="row mb-2">
           <div class="col-md-8">
             <h4><a href="/recipe/{{recipe.id}}">{{recipe.name}}</a></h4>
           </div>
@@ -59,11 +62,11 @@
               data-id="{{recipe.id}}"
             >DELETE</button>
           </div>
-        </div>
+        </div> --}}
       {{/each}}
     </div>
   {{/if}}
 </div>
-
-<script src="/js/add-recipe.js"></script>
+</div>
+<script src="/js/profile.js"></script>
 
