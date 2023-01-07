@@ -39,6 +39,22 @@
         />
       </div>
 
+      {{!-- TRYING TO ADD TAG SELECTION --}}
+      <div class="form-group">
+        <label for="tags-recipe">Tags:</label>
+          {{#each tags as |tag|}}
+            {{> tag-option-details}}
+          {{/each}}
+          <input
+            class="form-input"
+            type="checkbox"
+            id="None_of_the_Above"
+            name="None_of_the_Above"
+            value="None_of_the_Above"
+          />
+          <label for="None_of_the_Above">None_of_the_Above</label>
+      </div>
+
       <div class="form-group">
         <button class="btn btn-primary" type="submit">Add Recipe</button>
       </div>
@@ -51,18 +67,6 @@
 
       {{#each recipes as |recipe|}}
         {{> recipe-details}}
-        {{!-- CURRENTLY NON-FUNCTIONAL --}}
-        {{!-- <div class="row mb-2">
-          <div class="col-md-8">
-            <h4><a href="/recipe/{{recipe.id}}">{{recipe.name}}</a></h4>
-          </div>
-          <div class="col-md-4">
-            <button
-              class="btn btn-sm btn-danger"
-              data-id="{{recipe.id}}"
-            >DELETE</button>
-          </div>
-        </div> --}}
       {{/each}}
     </div>
   {{/if}}

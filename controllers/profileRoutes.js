@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User, Recipe } = require('../models');
+const { User, Recipe, Tag } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', withAuth, async (req, res) => {
@@ -25,10 +25,17 @@ router.get('/', withAuth, async (req, res) => {
     });
 
     const recipes = recipeData.map((recipe) => recipe.get({ plain: true }));
+
+    const tagData = await Tag.findAll({
+
+    });
+
+    const tags = tagData.map((tag) => tag.get({ plain: true }));
     
     res.render('profile', { 
       recipes,
       user,
+      tags,
       logged_in: req.session.logged_in 
     });
   } catch (err) {
