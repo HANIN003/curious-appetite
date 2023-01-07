@@ -16,14 +16,8 @@ bg-img {
   padding: 0;
 }
 
-body {
-<<<<<<< HEAD
-  background-image: url("../images/background.jpg");
-=======
-  background-image: url('../images/food-pic.jpg');
-  background-repeat: no-repeat;
-  /* -webkit-gradient(linear, left top, left bottom, from(#3c2121), to(rgb(169, 110, 110))); */
->>>>>>> fde0b5e0b523f298659c00d2eae6e7ccded398b1
+body, html {
+  height: 100%;
   display: flex;
   align-items: center;
   font: 100% Helevetica, sans-serif;
@@ -133,7 +127,7 @@ p {
   justify-content: center;
   position: relative;
   bottom: 1em;
-  right: 30em;
+  right: 50em;
 }
 
 .login-card {
@@ -248,19 +242,4 @@ span {
   text-align: center;
   font-size: 16px;
   margin-top: 3px;
-}
-
-.recipes1 {
-  position: relative;
-  right: 55em;
-  text-align: center;
-  max-height: -webkit-fit-content;
-  max-height: -moz-fit-content;
-  max-height: fit-content;
-  max-width: -webkit-fit-content;
-  max-width: -moz-fit-content;
-  max-width: fit-content;
-  width: 60vw;
-  background-color: rgb(92, 120, 148);
-  justify-content: space-around;
 }/*# sourceMappingURL=style.css.map */

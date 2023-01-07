@@ -56,6 +56,8 @@
   </div>
    <a href="/login"><button class="btn btn-outline-success" type="submit">Login</button></a>         
 </nav>
+
+
           {{#if logged_in}}            
           {{else}}
           {{/if}}
@@ -72,69 +74,10 @@
 
                         
       </main>
-    <div>
-      <header>
-        <div class="banner">
-          <span class="banner-text">Curious Appetite.......Find Your Next
-            Favorite Recipe!</span>
-        </div>
-        <div class="navbar">
-          <div class="navbar-container">
-            <div class="navbar-items">
-              <a class="cookie" href="/"><i class="fa fa-cutlery fa-5x"></i></a>
-              <form class="search-form">
-                {{! Not a route }}
-                {{! <a href="/search" class="navbar-item" id="search"> }}
-                <input
-                  type="text"
-                  id="textBox"
-                  name="search-text"
-                  placeholder="Search for a recipe"
-                />
-                <button type="submit" id="searchButton">
-                  <i class="fas fa-search"></i>
-                </button>
-              </form>
-              <a href="/recipes" class="navbar-item" id="view">View Recipes</a>
-              <div>
-                {{#if logged_in}}
-                  <button><a href="/profile">My Dashboard</a></button>
-                  |
-                  <button id="logout">Logout</button>
-                {{else}}
-                  <button><a href="/login">Login</a></button>
-                {{/if}}
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="main">
-        <main>
-         
-                    {{{body}}}
-     {{!-- <img src="../images/background.jpg" --}}
-                  </main>
     </div>
-
-    {{#if logged_in}}
-    {{/if}}
-
+    </body>
     <script src="/js/logout.js"></script>
 
-  </body>
-</html>
 
 
-
-
-
-
-  
-
- 
-    <script src="/js/search.js"></script>
-
-  </body>
-
-</html>
+      </html>
