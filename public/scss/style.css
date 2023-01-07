@@ -242,4 +242,16 @@ span {
   text-align: center;
   font-size: 16px;
   margin-top: 3px;
+}
+
+.container1 {
+  position: relative;
+  width: 100%;
+  width: 40em;
+  right: 50em;
+  height: 35em;
+  overflow: hidden;
+  align-content: center;
+  align-items: center;
+  font-size: 20px;
 }/*# sourceMappingURL=style.css.map */

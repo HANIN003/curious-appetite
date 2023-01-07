@@ -184,6 +184,7 @@ p {
   color: rgb(248, 244, 244);
   font-size: 18px;
 }
+
 button{
   width: 100%;
   background: transparent;
@@ -201,6 +202,7 @@ button{
 .submit-btn{
   position: relative;
 }
+
 .submit-btn::after{
   content: '\27a4';
   color: #333;
@@ -228,6 +230,19 @@ span{
   text-align: center;
   font-size: 16px;
   margin-top: 3px;
+}
+
+.recipes1 {
+  position: relative;
+  width: 100%;
+  width: 40em;
+  right: 60em;
+  height: 35em;
+  overflow: hidden;
+  align-content: center;
+  align-items: center;
+  font-size: 20px;
+
 }
 
 

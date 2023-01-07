@@ -27,7 +27,7 @@
   <body>
     
      
-    <img src="/images/3-forks.jpg" alt="bg-img">        
+    {{!-- <img src="/images/3-forks.jpg" alt="bg-img">         --}}
    
     <nav class="navbar fixed-top navbar-expand-lg navbar-light">
   <div class="container">
@@ -57,6 +57,10 @@
    <a href="/login"><button class="btn btn-outline-success" type="submit">Login</button></a>         
 </nav>
 
+    <div class="recipes1">
+      
+                        {{{body}}}
+            </div>
 
           {{#if logged_in}}            
           {{else}}
@@ -65,15 +69,10 @@
       </div>
     </div>
 
-    <div class="recipes1">
-    {{{body}}}
-    </div>
 
 
-      <main>
 
                         
-      </main>
     </div>
     </body>
     <script src="/js/logout.js"></script>
