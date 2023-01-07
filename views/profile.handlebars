@@ -42,13 +42,17 @@
       {{!-- TRYING TO ADD TAG SELECTION --}}
       <div class="form-group">
         <label for="tags-recipe">Tags:</label>
-        <input
-          class="form-input"
-          type="checkbox"
-          id="tags-recipe1"
-          name="tags-recipe1"
-          value
-        />
+          {{#each tags as |tag|}}
+            {{> tag-option-details}}
+          {{/each}}
+          <input
+            class="form-input"
+            type="checkbox"
+            id="None_of_the_Above"
+            name="None_of_the_Above"
+            value="None_of_the_Above"
+          />
+          <label for="None_of_the_Above">None_of_the_Above</label>
       </div>
 
       <div class="form-group">

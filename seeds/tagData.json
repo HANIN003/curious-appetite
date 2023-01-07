@@ -78,30 +78,30 @@
         "tag_name": "Seafood"
     },
     {
-        "tag_name": "Contains Tree Nuts"
+        "tag_name": "Contains_Tree_Nuts"
     },
     {
-        "tag_name": "Contains Peanuts"
+        "tag_name": "Contains_Peanuts"
     },
     {
-        "tag_name": "Contains Shellfish"
+        "tag_name": "Contains_Shellfish"
     },
     {
-        "tag_name": "Contains Wheat"
+        "tag_name": "Contains_Wheat"
     },
     {
-        "tag_name": "Contains Soy"
+        "tag_name": "Contains_Soy"
     },
     {
-        "tag_name": "Contains Milk"
+        "tag_name": "Contains_Milk"
     },
     {
-        "tag_name": "Contains Dairy"
+        "tag_name": "Contains_Dairy"
     },
     {
-        "tag_name": "Contains Eggs"
+        "tag_name": "Contains_Eggs"
     },
     {
-        "tag_name": "Contains Sesame"
+        "tag_name": "Contains_Sesame"
     }
 ]
