@@ -1,52 +1,45 @@
 @charset "UTF-8";
+bg-img {
+  height: 100vh;
+  width: 100vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+  filter: brightness(0.6);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
 * {
   margin: 0;
   padding: 0;
 }
 
-body {
-<<<<<<< HEAD
-  background-image: url("../images/background.jpg");
-=======
-  background-image: url('../images/food-pic.jpg');
-  background-repeat: no-repeat;
-  /* -webkit-gradient(linear, left top, left bottom, from(#3c2121), to(rgb(169, 110, 110))); */
->>>>>>> fde0b5e0b523f298659c00d2eae6e7ccded398b1
+body, html {
+  height: 100%;
   display: flex;
   align-items: center;
-  font: 100% Helvetica, sans-serif;
-  color: rgb(241, 229, 229);
-  background-color: rgb(67, 44, 122);
+  font: 100% Helevetica, sans-serif;
+  color: #333;
   justify-content: space-around;
+  overflow-x: hidden;
 }
 
-<<<<<<< HEAD
-html {
-  min-height: 100%;
-  background-image: url("../images/background.jpg");
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
+p {
+  font-size: 1.2em;
+  line-height: 1.5em;
+  color: white;
 }
 
 .cutlery {
   position: relative;
-  top: 1em;
-  left: 0em;
+  top: -9em;
+  right: 65em;
   width: 2em;
   height: 2em;
+  color: white;
 }
-=======
-.dashboard {
-  border: 5px solid black;
-  background-color: beige;
-  color: black;
-  padding: 20px;
-}
-
-
-
->>>>>>> fde0b5e0b523f298659c00d2eae6e7ccded398b1
 
 .search-bar {
   padding: 2px;
@@ -91,23 +84,6 @@ html {
   text-align: center;
 }
 
-#recipe-card {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-  width: 100%;
-  height: 100%;
-  background-color: rgb(100, 41, 42);
-  position: absolute;
-  top: 20em;
-  right: 30%;
-  max-width: 38em;
-  max-height: 35em;
-  font-size: 18px;
-}
-
 #view {
   display: flex;
   flex-wrap: wrap;
@@ -118,8 +94,9 @@ html {
   height: 2em;
   background-color: rgb(149, 158, 167);
   position: relative;
-  top: -6em;
-  left: 5em;
+  top: 0em;
+  left: 20em;
+  color: white;
 }
 
 #post {
@@ -134,19 +111,10 @@ html {
   position: relative;
   top: -4em;
   left: 5em;
-}
-
-.banner-text {
-  position: absolute;
-  top: 5%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
   color: white;
-  font-size: 2em;
 }
 
-.container {
+.login-container {
   display: flex;
   flex-wrap: wrap;
   width: 38em;
@@ -158,7 +126,8 @@ html {
   align-items: center;
   justify-content: center;
   position: relative;
-  bottom: 1.1em;
+  bottom: 1em;
+  right: 30em;
 }
 
 .login-card {
@@ -273,4 +242,19 @@ span {
   text-align: center;
   font-size: 16px;
   margin-top: 3px;
+}
+
+.recipes1 {
+  position: relative;
+  right: 55em;
+  text-align: center;
+  max-height: -webkit-fit-content;
+  max-height: -moz-fit-content;
+  max-height: fit-content;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  width: 60vw;
+  background-color: rgb(92, 120, 148);
+  justify-content: space-around;
 }/*# sourceMappingURL=style.css.map */
