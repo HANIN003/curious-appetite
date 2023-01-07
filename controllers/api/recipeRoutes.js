@@ -40,6 +40,7 @@ router.post('/', withAuth, async (req, res) => {
     const newRecipe = await Recipe.create({
       ...req.body,
       user_id: req.session.user_id,
+      tag_id: [req.body.tag_ids]
     });
 
     res.status(200).json(newRecipe);

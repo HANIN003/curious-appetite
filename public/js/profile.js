@@ -19,9 +19,16 @@ const newFormHandler = async (event) => {
   }
 
   const tags = [];
+  const tagIdList = [];
 
   for (let i = 0; i < tagIdentifiers.length; i++) {
     if (tagIdentifiers[i].checked) {
+      const tagId = i + 1
+      console.log(tagId)
+      tagIdList.push(tagId)
+      const tagIdJson = `{"tag_id" : "${tagId}"}`
+      const tagIdParsed = JSON.parse(tagIdJson)
+      tagIdList.push(tagIdParsed)
       const tagJson = `{"tag_name" : "${tagIdentifiers[i].value}"}`
       const tagParsed = JSON.parse(tagJson)
       tags.push(tagParsed)
@@ -34,20 +41,18 @@ const newFormHandler = async (event) => {
   // console.log(tags)
 
   const tag_names = JSON.stringify({tags})
+  const tag_ids = JSON.stringify({tagIdList})
 
-  const tagFinal = JSON.stringify({tag_names})
-
+  console.log(tag_ids)
   console.log(tag_names)
-  console.log(tagFinal)
+
   // console.log(title, ingredients, method, tags)
-  console.log(title, ingredients, method, tag_names)
-  console.log(title, ingredients, method, tagFinal)
+  console.log(title, ingredients, method, tag_names, tag_ids)
 
-
-  if (title && ingredients && method && tagFinal) {
+  if (title && ingredients && method && tag_names) {
     const response = await fetch(`api/recipes`, {
       method: "POST",
-      body: JSON.stringify({ title, ingredients, method, tagFinal }),
+      body: JSON.stringify({ title, ingredients, method, tag_ids }),
       headers: { "Content-Type": "application/json" },
     });
     if (response.ok) {
