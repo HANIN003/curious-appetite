@@ -26,19 +26,11 @@ const newFormHandler = async (event) => {
       const tagId = i + 1
       console.log(tagId)
       tagIdList.push(tagId)
-      const tagIdJson = `{"tag_id" : "${tagId}"}`
-      const tagIdParsed = JSON.parse(tagIdJson)
-      tagIdList.push(tagIdParsed)
-      const tagJson = `{"tag_name" : "${tagIdentifiers[i].value}"}`
-      const tagParsed = JSON.parse(tagJson)
-      tags.push(tagParsed)
-      // console.log(tagIdentifiers[i].value)
-      // console.log(tagJson)
-      // console.log(tagParsed)
     }
   }
 
-  // console.log(tags)
+  console.log(tagIdList)
+  console.log(tags)
 
   const tag_names = JSON.stringify({tags})
   const tag_ids = JSON.stringify({tagIdList})
@@ -46,21 +38,21 @@ const newFormHandler = async (event) => {
   console.log(tag_ids)
   console.log(tag_names)
 
-  // console.log(title, ingredients, method, tags)
   console.log(title, ingredients, method, tag_names, tag_ids)
 
-  if (title && ingredients && method && tag_names) {
+  if (title && ingredients && method && tagIdList.length) {
     const response = await fetch(`api/recipes`, {
       method: "POST",
-      body: JSON.stringify({ title, ingredients, method, tag_ids }),
+      body: JSON.stringify({ title, ingredients, method, tagIdList }),
       headers: { "Content-Type": "application/json" },
     });
     if (response.ok) {
-      // document.location.replace("/profile");
+      document.location.replace("/profile");
     } else {
       alert("Failed to create new recipe!");
     }
   }
+
 };
 
 // CURRENTLY NON-FUNCTIONAL

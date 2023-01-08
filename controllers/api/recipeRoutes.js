@@ -40,12 +40,32 @@ router.post('/', withAuth, async (req, res) => {
     const newRecipe = await Recipe.create({
       ...req.body,
       user_id: req.session.user_id,
-      tag_id: [req.body.tag_ids]
     });
+
+    const recipeIdentified = newRecipe.id
+
+    // console.log(recipeIdentified)
+
+    const recipeTagIdArr = req.body.tagIdList.map((tag_id) => {
+      return {
+        recipe_id: newRecipe.id,
+        tag_id,
+      };
+    });
+    // console.log(recipeTagIdArr)
+    
+    const recipeTagData = await RecipeTag.bulkCreate(recipeTagIdArr);
+
+    // console.log(recipeTagData)
+
+    newRecipe.tags = recipeTagData
+
+    // console.log(newRecipe)
 
     res.status(200).json(newRecipe);
   } catch (err) {
     res.status(400).json(err);
+    // console.log(err)
   }
 });
 
