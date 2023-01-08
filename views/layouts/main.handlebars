@@ -30,6 +30,27 @@
   <div class="container">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
+    {{!--     <div>
+      <header>
+        <div class="banner">
+          <span class="banner-text">Curious Appetite.......Find Your Next
+            Favorite Recipe!</span>
+        </div>
+        <div class="navbar">
+          <div class="navbar-container">
+            <div class="navbar-items">
+              <a class="cookie" href="/"><i class="fa fa-cutlery fa-5x"></i></a>
+              <form class="search-form">
+                {{! Not a route }}
+                {{! <a href="/search" class="navbar-item" id="search"> }}
+                <input
+                  type="text"
+                  id="textBox"
+                  name="search-text"
+                  placeholder="Search for a recipe"
+                />
+                <button type="submit" id="searchButton">
+                  <i class="fas fa-search"></i> --}}
     </button>
     <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
       <a class="navbar-brand" href="#"><h1>Curious-Appetite</h1></a>
@@ -48,10 +69,24 @@
         <input class="form-control me-2" type="search" id="search-bar" placeholder="Search For a Recipe..." aria-label="Search">
         <a href="/recipes"><button class="btn btn-outline-success" id="search" type="submit">Search</button></a>
       </form>
+                    <a href="/recipes" class="navbar-item" id="view">View Recipes</a>
+              <div>
+                {{#if logged_in}}
+                  <button><a href="/profile">My Dashboard</a></button>
+                  |
+                  <button id="logout">Logout</button>
+                {{else}}
+                  <button><a href="/login">Login</a></button>
+                {{/if}}
     </div>
   </div>
-   <a href="/login"><button class="btn btn-outline-success" id="login" type="submit">Login</button></a> 
-   <a href="/logout"><button class="btn btn-outline-success" id="logout" type="submit">Logout</button></a>       
+  {{!--          </div>
+        </div>
+      </div>
+      <div class="main">
+        <main> --}}
+   {{!-- <a href="/login"><button class="btn btn-outline-success" id="login" type="submit">Login</button></a> 
+   <a href="/logout"><button class="btn btn-outline-success" id="logout" type="submit">Logout</button></a>        --}}
 </nav>
     {{!-- <div class="recipes1"> --}}
       
@@ -59,7 +94,7 @@
             </div>
 
           {{#if logged_in}}            
-          {{else}}
+      <script src="/js/logout.js"></script>
           {{/if}}
         </div>
       </div>
@@ -67,6 +102,6 @@
     </div>
  
     </body>
-    <script src="/js/logout.js"></script>
-    <script src="/js/login.js"></script>
+    {{!-- <script src="/js/logout.js"></script>
+    <script src="/js/login.js"></script> --}}
       </html>

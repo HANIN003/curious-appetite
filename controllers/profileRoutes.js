@@ -26,9 +26,7 @@ router.get('/', withAuth, async (req, res) => {
 
     const recipes = recipeData.map((recipe) => recipe.get({ plain: true }));
 
-    const tagData = await Tag.findAll({
-
-    });
+    const tagData = await Tag.findAll({});
 
     const tags = tagData.map((tag) => tag.get({ plain: true }));
     
