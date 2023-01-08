@@ -18,5 +18,153 @@
     {
         "recipe_id": 2,
         "tag_id": 34
+    },
+    {
+        "recipe_id": 3,
+        "tag_id": 7
+    },
+    {
+        "recipe_id": 3,
+        "tag_id": 21
+    },
+    {
+        "recipe_id": 3,
+        "tag_id": 22
+    },
+    {
+        "recipe_id": 3,
+        "tag_id": 23
+    },
+    {
+        "recipe_id": 3,
+        "tag_id": 30
+    },
+    {
+        "recipe_id": 4,
+        "tag_id": 14
+    },
+    {
+        "recipe_id": 4,
+        "tag_id": 19
+    },
+    {
+        "recipe_id": 4,
+        "tag_id": 22
+    },
+    {
+        "recipe_id": 4,
+        "tag_id": 33
+    },
+    {
+        "recipe_id": 5,
+        "tag_id": 17
+    },
+    {
+        "recipe_id": 5,
+        "tag_id": 30
+    },
+    {
+        "recipe_id": 5,
+        "tag_id": 32
+    },
+    {
+        "recipe_id": 5,
+        "tag_id": 34
+    },
+    {
+        "recipe_id": 6,
+        "tag_id": 2
+    },
+    {
+        "recipe_id": 6,
+        "tag_id": 21
+    },
+    {
+        "recipe_id": 6,
+        "tag_id": 22
+    },
+    {
+        "recipe_id": 6,
+        "tag_id": 23
+    },
+    {
+        "recipe_id": 7,
+        "tag_id": 11
+    },
+    {
+        "recipe_id": 7,
+        "tag_id": 16
+    },
+    {
+        "recipe_id": 8,
+        "tag_id": 8
+    },
+    {
+        "recipe_id": 8,
+        "tag_id": 12
+    },
+    {
+        "recipe_id": 8,
+        "tag_id": 16
+    },
+    {
+        "recipe_id": 8,
+        "tag_id": 30
+    },
+    {
+        "recipe_id": 8,
+        "tag_id": 32
+    },
+    {
+        "recipe_id": 8,
+        "tag_id": 33
+    },
+    {
+        "recipe_id": 8,
+        "tag_id": 34
+    },
+    {
+        "recipe_id": 9,
+        "tag_id": 11
+    },
+    {
+        "recipe_id": 9,
+        "tag_id": 16
+    },
+    {
+        "recipe_id": 9,
+        "tag_id": 20
+    },
+    {
+        "recipe_id": 9,
+        "tag_id": 23
+    },
+    {
+        "recipe_id": 9,
+        "tag_id": 27
+    },
+    {
+        "recipe_id": 9,
+        "tag_id": 31
+    },
+    {
+        "recipe_id": 10,
+        "tag_id": 16
+    },
+    {
+        "recipe_id": 10,
+        "tag_id": 22
+    },
+    {
+        "recipe_id": 10,
+        "tag_id": 30
+    },
+    {
+        "recipe_id": 10,
+        "tag_id": 32
+    },
+    {
+        "recipe_id": 10,
+        "tag_id": 33
     }
 ]
