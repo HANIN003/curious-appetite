@@ -1,7 +1,7 @@
 $font-stack: Helevetica, sans-serif;
 $primary-color: #333;
 $secondary-color: #fff;
-$accent-color: #f1c40f;
+$accent-color: #a33f20;
 @function text-clr($color){
   @if (lightness($color) > 50%) {
     @return $primary-color;
@@ -9,10 +9,13 @@ $accent-color: #f1c40f;
     @return $secondary-color; ;
   }
 }
-
-
-
-
+@function bg-clr($color){
+  @if (lightness($color) > 50%) {
+    @return $secondary-color;
+  } @else {
+    @return $primary-color; ;
+  }
+}
 bg-img {
   height: 100vh;
   width: 100vw;
@@ -27,6 +30,7 @@ bg-img {
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body, html {
@@ -53,16 +57,8 @@ body, html {
   right: 15em; 
   width: 15em;
   height: 15em;
-  
 }
 
-#textBox{
-  height: 2em;
-  width: 10em;
-  top: 5em;
-  left: 5em;
-}
-// Path: public/scss/_footer.scss
 .footer {
   background-color: rgb(23, 63, 104);
   padding: 20px;
@@ -200,11 +196,13 @@ span{
 }
 
 h1 {
-  color: rgb(228, 201, 201);
+  color: rgb(228, 217, 214);
   font-size: 3em;
   font-weight: 600;
   background-color: rgb(154, 54, 41);
   border-radius: 10px;
+  padding: 10px;
+  margin: 8px;
   
   
 }
@@ -212,10 +210,16 @@ h1 {
 h2 {
   background-color: rgb(151, 138, 163);
   color: white;
+  padding: 10px;
+  margin: 8px;
+  border-radius: 8px;
 }
 h3{
   background-color: rgb(151, 138, 163);
   color: white;
+  padding: 10px;
+  margin: 8px;
+  border-radius: 8px;
 }
 
 p {
@@ -224,6 +228,100 @@ p {
   color: rgb(228, 201, 201); 
   max-width: 30em;
   background-color: rgb(154, 54, 41);
+  border-radius: 10px;
+  padding: 10px;
+  margin: 8px;
 }
+
+#login{
+  padding: 5px;
+  margin: 12px;
+  border: solid #333 1px;
+  border-radius: 10px;
+  text-align: center;
+  position: relative;
+  right: 3em;
+  background-color: lightgray;
+}
+
+#logout{
+  padding: 5px;
+  margin: 12px;
+  border: solid #333 1px;
+  border-radius: 10px;
+  text-align: center;
+  position: relative;
+  right: 2em;
+  background-color: lightgray;
+
+}
+
+#search{
+  padding: 5px;
+  margin: 16px;
+  border: solid #333 1px;
+  border-radius: 10px;
+  text-align: center;
+  position: relative;
+}
+
+#search-bar{
+  padding: 5px;
+  margin: 16px;
+  border: solid #333 1px;
+  border-radius: 10px;
+  text-align: center;
+  position: relative;
+}
+
+#home{
+  padding: 5px;
+  margin: 12px;
+  border: solid #333 1px;
+  border-radius: 10px;
+  text-align: center;
+  position: relative;
+  right: 1em;
+  background-color: lightgray;
+}
+
+#recipes{
+  padding: 5px;
+  margin: 12px;
+  border: solid #333 1px;
+  border-radius: 10px;
+  text-align: center;
+  position: relative;
+  right: 2em;
+  background-color: lightgray;
+}
+
+#post{
+  padding: 5px;
+  margin: 12px;
+  border: solid #333 1px;
+  border-radius: 10px;
+  text-align: center;
+  position: relative;
+  right: 3em;
+  background-color: lightgray;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(145, 34, 24);
+  color: white;
+  padding: 6px;
+  margin: 6px;
+  border-radius: 8px;
+  width: 30em;
+  position: relative;
+  right: 35em;
+  height: 6em;
+}
+
 
 

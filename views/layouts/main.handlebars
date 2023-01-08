@@ -25,10 +25,7 @@
     ></script>
   </head>
   <body>
-    
-     
-    {{!-- <img src="/images/3-forks.jpg" alt="bg-img">         --}}
-   
+       
     <nav class="navbar fixed-top navbar-expand-lg navbar-light">
   <div class="container">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
@@ -37,28 +34,25 @@
     <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
       <a class="navbar-brand" href="#"><h1>Curious-Appetite</h1></a>
       <ul class="navbar-nav ms-auto">
-      {{!-- <ul class="navbar-nav me-auto mb-2 mb-lg-0"> --}}
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/">Home</a>
+          <a class="nav-link active" id="home" aria-current="page" href="/">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/recipes">View Recipes</a>
+          <a class="nav-link" id="recipes" href="/recipes">View Recipes</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/post">Post a Recipe!</a>
+          <a class="nav-link" id="post" href="/post">Post a Recipe!</a>
         </li>
       </ul>
       <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search For a Recipe..." aria-label="Search">
-        <a href="/recipes"><button class="btn btn-outline-success" type="submit">Search</button></a>
+        <input class="form-control me-2" type="search" id="search-bar" placeholder="Search For a Recipe..." aria-label="Search">
+        <a href="/recipes"><button class="btn btn-outline-success" id="search" type="submit">Search</button></a>
       </form>
     </div>
   </div>
-   <a href="/login"><button class="btn btn-outline-success" type="submit">Login</button></a> 
-   <a href="/logout"><button class="btn btn-outline-success" type="submit">Logout</button></a>"        
+   <a href="/login"><button class="btn btn-outline-success" id="login" type="submit">Login</button></a> 
+   <a href="/logout"><button class="btn btn-outline-success" id="logout" type="submit">Logout</button></a>       
 </nav>
-
-
     {{!-- <div class="recipes1"> --}}
       
                         {{{body}}}
@@ -69,16 +63,21 @@
           {{/if}}
         </div>
       </div>
+    </div>                      
     </div>
 
-
-
-
-                        
+<footer class="footer">
+    <div class="contain-footer">
+      <div class="content has-text-centered">
+          <a href="http://github.com"><i class="fab fa-github fa-3x" aria-hidden="true"></i></a>
+        </div>
+        <strong>Curious Appetite</strong> by Ann Hixson, Nate Hanisch, and Dave Proto.
+      </div>
     </div>
+  </footer>
+
+ 
     </body>
     <script src="/js/logout.js"></script>
-
-
-
+    <script src="/js/login.js"></script>
       </html>
