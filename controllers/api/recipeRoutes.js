@@ -1,6 +1,6 @@
-const router = require('express').Router();
-const { User, Recipe, Tag, RecipeTag, Comment } = require('../../models');
-const withAuth = require('../../utils/auth');
+const router = require("express").Router();
+const { User, Recipe, Tag, RecipeTag, Comment } = require("../../models");
+const withAuth = require("../../utils/auth");
 
 router.get('/', async (req, res) => {
     try {
@@ -64,8 +64,7 @@ router.post('/', withAuth, async (req, res) => {
 
     res.status(200).json(newRecipe);
   } catch (err) {
-    res.status(400).json(err);
-    // console.log(err)
+    res.status(500).json(err);
   }
 });
 
