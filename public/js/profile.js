@@ -24,21 +24,21 @@ const newFormHandler = async (event) => {
   for (let i = 0; i < tagIdentifiers.length; i++) {
     if (tagIdentifiers[i].checked) {
       const tagId = i + 1
-      console.log(tagId)
+      // console.log(tagId)
       tagIdList.push(tagId)
     }
   }
 
-  console.log(tagIdList)
-  console.log(tags)
+  // console.log(tagIdList)
+  // console.log(tags)
 
   const tag_names = JSON.stringify({tags})
   const tag_ids = JSON.stringify({tagIdList})
 
-  console.log(tag_ids)
-  console.log(tag_names)
+  // console.log(tag_ids)
+  // console.log(tag_names)
 
-  console.log(title, ingredients, method, tag_names, tag_ids)
+  // console.log(title, ingredients, method, tag_names, tag_ids)
 
   if (title && ingredients && method && tagIdList.length) {
     const response = await fetch(`api/recipes`, {
