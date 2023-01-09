@@ -29,7 +29,7 @@ run npm install from the terminal.
 ## Usage
 run npm start from the terminal and use localhost:3001 to view on your browser window.
 
-To search for a recipe, open the webDevTools console to get the results for the search. Then go to {website}/recipes/{id} where {id} is the id number provided in the console.
+To search for a recipe, open the webDevTools console to get the results for the search. Then go to https://obscure-shore-43973.herokuapp.com/recipes/{id} where {id} is the id number provided in the console.
 
 The webpage is deployed at [https://obscure-shore-43973.herokuapp.com/](https://obscure-shore-43973.herokuapp.com/)
 
