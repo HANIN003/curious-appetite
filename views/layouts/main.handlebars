@@ -47,9 +47,9 @@
                 </li>
                 <li class="nav-item">
                   <a class="nav-link">
-                    <form class="d-flex" role="search">
+                    <form class="d-flex" role="search" id="searchResults">
                       <input class="form-control me-2" type="text" id="search-bar" placeholder="Search For a Recipe..." aria-label="Search">
-                      <a href="/recipes"><button class="btn btn-outline-success" id="search" type="submit">Search</button></a>
+                      <a href="/search-results"><button class="btn btn-outline-success" id="search" type="submit">Search</button></a>
                     </form>
                   </a>
                 </li>
@@ -80,6 +80,8 @@
     {{#if logged_in}}            
       <script src="/js/logout.js"></script>
     {{/if}}
+
+    <script src="/js/testing-search.js"></script>
   
   </body>
 </html>

@@ -1,12 +1,13 @@
 const router = require('express').Router();
 const { User, Recipe, Comment, Tag } = require('../models');
+// const {searchResults} = require('../public/js/testing-search')
 
 router.get('/', async (req, res) => {
   try {
     const recipeData = await Recipe.findAll({
-      // where: {
-      //   id: req.body.searchResults
-      // },
+      where: {
+        id: searchResults
+      },
       include: [
         {
           model: User,
@@ -39,6 +40,7 @@ router.get('/', async (req, res) => {
     });
   } catch (err) {
     res.status(500).json(err);
+    console.log(err)
   }
 });
 
@@ -77,5 +79,3 @@ router.get('/:id', async (req, res) => {
 });
 
 module.exports = router;
-
-
