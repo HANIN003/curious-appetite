@@ -9,8 +9,8 @@
   <div class="col-md-6" id="add">
     <h3 id="text">Add Your Recipe!</h3>
     <form class="form new-recipe-form" id="enterrecipe">
-      <div class="form-group">
-        <label for="name-recipe">Recipe Name:</label>
+      <div class="form-group card">
+        <label for="name-recipe" class="card-body">Recipe Name:</label>
         <input
           class="form-input"
           type="text"
@@ -19,8 +19,8 @@
         />
       </div>
 
-      <div class="form-group">
-        <label for="ingredients-recipe">Ingredients:</label>
+      <div class="form-group card">
+        <label for="ingredients-recipe" class="card-body">Ingredients:</label>
         <input
           class="form-input"
           type="text"
@@ -29,8 +29,8 @@
         />
       </div>
 
-      <div class="form-group">
-        <label for="instructions-recipe">Instructions:</label>
+      <div class="form-group card">
+        <label for="instructions-recipe" class="card-body">Instructions:</label>
         <input
           class="form-input"
           type="text"
@@ -39,11 +39,12 @@
         />
       </div>
 
-      <div class="form-group">
-        <label for="tags-recipe">Tags:</label>
+      <div class="form-group card">
+        <label for="tags-recipe" class="card-body">Tags:</label>
           {{#each tags as |tag|}}
             {{> tag-option-details}}
           {{/each}}
+          <div class="card">
           <input
             class="form-input"
             type="checkbox"
@@ -52,6 +53,7 @@
             value="None_of_the_Above"
           />
           <label for="None_of_the_Above">None_of_the_Above</label>
+          </div>
       </div>
 
       <div class="form-group">

@@ -6,7 +6,7 @@ router.get('/', async (req, res) => {
   try {
     const recipeData = await Recipe.findAll({
       where: {
-        id: searchResults
+        id: req.body.searchResults
       },
       include: [
         {
