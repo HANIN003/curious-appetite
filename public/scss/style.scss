@@ -39,13 +39,13 @@ body, html {
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
-  height: 100%;
+  // height: 100%;
   display: flex;
   align-items: center;
   font: 100% $font-stack;
   color: $primary-color;
   justify-content: space-around;
-  overflow-x: hidden;
+  // overflow-x: hidden;
 }
 
 .search-bar {
