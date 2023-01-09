@@ -355,7 +355,7 @@ p {
 
 #comments {
   position: relative;
-  right: 0em;
+  right: 1em;
   top: 5em;
 }
 
@@ -429,7 +429,7 @@ h4 {
 
 #addcomment {
   position: relative;
-  right: 2em;
+  right: 3em;
   top: 0em;
 }
 
@@ -441,10 +441,5 @@ h4 {
 
 #dashboard {
   position: relative;
-  left: -4em;
-  top: 0em;
-}
-
-#tags {
-  color: white;
+  left: -2em;
 }/*# sourceMappingURL=style.css.map */

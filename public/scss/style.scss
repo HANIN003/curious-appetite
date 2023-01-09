@@ -360,7 +360,7 @@ p {
 
 #comments{
   position: relative;
-  right: 0em;
+  right: 1em;
   top: 5em;
 }
 
@@ -425,31 +425,26 @@ h4 {
   top: 0em;
 }
 
-#enterrecipe{
+#enterrecipe{ 
   position: relative;
   right: 13em;
   top: 0em;
 }
 
-#addcomment{
+#addcomment{ 
   position: relative;
-  right: 2em;
+  right: 3em;
   top: 0em;
 }
 
-#commentBtn{
+#commentBtn {
   position: relative;
   left: -13em;
-  top: 0em;
+  top:  0em;
 }
 
-#dashboard{
+#dashboard {
   position: relative;
-  left: -4em;
-  top: 0em;
-}
-
-#tags{
-  color: white;
+  left: -2em;
 }
 
