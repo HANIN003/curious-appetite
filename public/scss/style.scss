@@ -34,7 +34,7 @@ bg-img {
 }
 
 body, html {
-  background-image: url("/images/3-forks.jpg");
+  background-image: url("/images/background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -213,6 +213,8 @@ h2 {
   padding: 10px;
   margin: 8px;
   border-radius: 8px;
+  position: relative;
+  left: 0em;
 }
 h3{
   background-color: rgb(151, 138, 163);
@@ -220,6 +222,8 @@ h3{
   padding: 10px;
   margin: 8px;
   border-radius: 8px;
+  position: relative;
+  left: 0em;
 }
 
 p {
@@ -231,6 +235,8 @@ p {
   border-radius: 10px;
   padding: 10px;
   margin: 8px;
+  position: relative;
+  right: 0em;
 }
 
 #login{
@@ -240,7 +246,7 @@ p {
   border-radius: 10px;
   text-align: center;
   position: relative;
-  right: 3em;
+  right: 8em;
   background-color: lightgray;
 }
 
@@ -263,6 +269,8 @@ p {
   border-radius: 10px;
   text-align: center;
   position: relative;
+  left: -9em;
+  background-color: lightgray;
 }
 
 #search-bar{
@@ -294,6 +302,7 @@ p {
   position: relative;
   right: 2em;
   background-color: lightgray;
+  
 }
 
 #post{
@@ -307,37 +316,135 @@ p {
   background-color: lightgray;
 }
 
-.footer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: rgb(145, 34, 24);
-  color: white;
-  padding: 6px;
-  margin: 6px;
-  border-radius: 8px;
-  width: 30em;
+#home{
   position: relative;
-  right: 35em;
-  height: 6em;
+  right: 10em;
 }
 
-.footer a {
-  padding: 2px;
-  font-size: 18px;
-  width: 30px;
-  text-align: center;
-  text-decoration: none;
-  margin: 5px 2px;
-  border-radius: 50%;
-  color:rgb(162, 162, 201)
+#recipes{
+  position: relative;
+  right: 10em;
 }
 
-.footer a:hover {
-  background-color: #ddd;
-  color: black;
+#search-bar{
+  position: relative;
+  right: 10em;
+  top: -1.7em;
+}
+
+#search{
+  position: relative;
+  right: 10em;
+  top: -1.3em;
+}
+
+#login{
+  position: relative;
+  left: -2em;
+  top: -0.5em;
+}
+
+#logout{
+  position: relative;
+  left: -2em;
+  top: -0.7em;
 }
 
 
+
+.text-center{
+  position: relative;
+  right: 1em;
+  top: 5em;
+}
+
+#comments{
+  position: relative;
+  right: 1em;
+  top: 5em;
+}
+
+#comment-content{
+  position: relative;
+  right: 11em;
+  top: 0em;
+}
+
+.btn  {
+  position: relative;
+  left: 14em;
+  top: 0em;
+}
+
+.card-body{
+  position: relative;
+  left: 0em;
+  top: 0em;
+}
+
+.form-group{
+  position: relative;
+  left: 13em;
+  top: 0em;
+}
+
+h4 {
+  position: relative;
+  left: 1em;
+  top: 0em;
+  color: white; 
+}
+
+#comment-box{
+  position: relative;
+  left: 0em;
+  top: 0em;
+}
+
+#mycomment{
+  position: relative;
+  left: 0em;
+  top: 0em;
+}
+
+#add {
+  position: relative;
+  left: 0em;
+  top: 0em;
+}
+.btn {
+  position: relative;
+  left: 0em;
+  top: 0em;
+  background-color: aliceblue;
+}
+
+#welcome{
+  position: relative;
+  left: 16em;
+  top: 0em;
+}
+
+#enterrecipe{ 
+  position: relative;
+  right: 13em;
+  top: 0em;
+}
+
+#addcomment{ 
+  position: relative;
+  right: 3em;
+  top: 0em;
+}
+
+#commentBtn {
+  position: relative;
+  left: -13em;
+  top:  0em;
+}
+
+#dashboard {
+  position: relative;
+  left: -2em;
+}
 
