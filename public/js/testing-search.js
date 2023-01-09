@@ -16,18 +16,21 @@ const searchHandler = async (event) => {
     // }
 
     const searchResults = [];
+    const idForSearch = [];
 
     for (let i = 0; i < allRecipes.length; i++) {
         if (allRecipes[i].title.toLowerCase().includes(searchTerm)) {
-            searchResults.push(allRecipes[i].id);
+            searchResults.push(allRecipes[i].title);
+            idForSearch.push(allRecipes[i].id)
         }  
     }
     if (!searchResults.length) {
         console.log('No Results')
     }
-    // console.log(searchResults)
+    console.log(searchResults);
+    console.log(idForSearch);
     
-    // module.exports = {searchResults}
+
 
     // document.location.replace("/search-results");
 
